@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("https://fonts.google.com/?query=helvetica") format("woff");
+}
+:root {
+    --feher: #ffffff;
+    --vilagos_szurke: #F2F2F2;
+    --gomb_szurke:#B9B9B9;
+    --szurke: #707070;
+    --sotet_szurke: #4A4A4A;
+    --pink: #E6426E;
+    --vilagos_pink: #E6426E57;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body{background-color: var(--feher);}
+
+#header_1sor{
+    background-color: var(--vilagos_szurke);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#navigacio {
+    margin-top: 20px;
+}
+#navigacio a {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+span{
+    color: var(--pink);
+    font-weight: bold;
+}
+.btn {
+    border-radius: 45px;
+    background-color: var(--pink);
+    box-shadow: 5px 5px 30px 0px var(--vilagos_pink);
+    color: var(--feher);
+}
+
+.btn:hover,:focus {
+    background-color: var(--gomb_szurke)  ;
+    color: var(--feher);
+    box-shadow: 5px 5px 20px #9F9F9F48;
+
+}
+
+@media (max-width :320px) {
+    .row {
+        flex-direction : column;
+        align-items: flex-start;
+    };
+    .icon {
+        font-size: .5rem;
+
+    }
+}
+@media (max-width :768px) {
+    .row {
+        flex-direction : column;
+    };
+    .icon {
+        font-size: .50rem;
+    }
+}
+@media (max-width :980px) {
+    .icon {
+        font-size: .75rem;
+    }
+}
