@@ -20,24 +20,24 @@
 </head>
 <body>
     <div id="header_vc" class="container-fluid">
-            <div id="header_1sor" class="row">
+            <div id="header_1sor" class="row align-items-center">
                 <div class="col-1 d-none d-md-block"></div>
-                <div class="col-10">
+                <div class="col-12 col-md-10" style="padding-top:10px;padding-bottom:10px">
                     <div class="row">
-                        <div class="col-md-4">
-                            <img src="../view/images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete">
+                        <div id="logodiv" class="col-3 d-flex justify-content-start col-md-4">
+                            <img src="../view/images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
                         </div>
-                        <div class="col-md-3" style="padding-top: 5px;">
-                            <p class="text-end">Ügyfélszolgálat:<span>+36 (30) 123-4567</span></p>
+                        <div id="kontaktok" class="col-9 d-flex justify-content-end col-md-5 " style="padding-top: 5px;">
+                            <p class="eltunik" style="color: #4a4a4a;">Ügyfélszolgálat:</p>
+                            <p style="padding-right:5px">+36 (30) 123-4567</p>
+                            <p class="elvalaszto"><span>|</span></p>
+                            <p class="eltunik" style="color: #4a4a4a;">E-mail:</p>
+                            <p>info@visitorcare.eu</p>
                         </div>
-                        <div class="col-md-3" style="padding-top: 5px;">
-                            <p class="text-start">E-mail:<span>info@visitorcare.eu</span></p>
-                        </div>
-                        <div class="col-md-1 col-sm-6">
-                            <button class="btn">Belépés</button>
-                        </div>
-                        <div class="col-md-1 col-sm-6">
-                            <button class="btn">Regisztráció</button>
+
+                        <div id="gombok" class="col-12 d-flex justify-content-end col-md-3 gap-2 px-auto">
+                            <button class="btn" type="button" style="width: 100px; margin-right: 15px;">Belépés</button>
+                            <button class="btn" type="button" style="width: 100px;">Regisztráció</button>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@
             </div>
 
             <div id="navigacio" class="row">
-            <div class="col-1 d-none d-md-block"></div>
-                <div class="col-10">
+                <div class="col-1 d-none d-md-block"></div>
+                <div class="col-12 col-md-10">
                     <div class="row">
-                        <div class="col-md-8 text-start">
+                        <div class="d-none d-md-block col-md-8 d-flex justify-content-start ">
                             <p>Regisztrált szakemberek az oldalon: <span>1.234 db</span></p>
                         </div>
-                        <div class="col-md-4 justify-content-end">
+                        <div class="col-12 col-md-4 d-flex justify-content-end">
                             <nav class="nav">
                                 <a class="nav-link active" href="">Főoldal</a>
                                 <a class="nav-link" href="#">Rólunk</a>
@@ -61,7 +61,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1 d-none d-md-block"></div>
+                <div class="col-1 d-sm-none d-md-block"></div>
+
             </div>
     </div>
 
@@ -129,10 +130,10 @@
 
 
     <!-- Scriptek -->  
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <script src="./js/hw.js"></script>
 </body>
 </html>
