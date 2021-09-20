@@ -19,6 +19,11 @@
     font-size: 13px;
 }
 
+h1 {
+    color: var(--sotet_szurke);
+    font-size: 24px;
+}
+
 body{background-color: var(--feher);}
 
 #header_1sor{
@@ -37,6 +42,12 @@ body{background-color: var(--feher);}
     font-weight: bold;
 }
 
+hr{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 #navigacio {
     margin-top: 20px;
@@ -59,6 +70,98 @@ body{background-color: var(--feher);}
     box-shadow: 5px 5px 20px #9F9F9F48;
 
 }
+#hirek-slide{
+    margin-bottom: 40px;
+}
+
+.card  {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+#valaszdki{
+    margin-top: 20px;
+    background-color: var(--pink);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#valaszdki h1 {
+    color: white;
+    text-align: center;
+}
+
+#valaszdki h2 {
+    color: var(--sotet_szurke);
+    font-size: 7rem;
+    opacity: 0.5;
+}
+
+.valaszt{
+    border-radius: 20px;
+    padding:20px;
+    background-color: white;
+}
+.valaszt h3 {
+    color: var(--pink);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#hogyan{
+    margin-top: 20px;
+}
+
+.svgimg{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    padding-top: 20px;
+    color: var(--pink);
+}
+
+#bestszakik {
+    background-color: var(--vilagos_szurke);
+    margin-top: 40px;
+    padding-top: 20px;;
+    padding-bottom: 15px;
+}
+
+.card-best{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.card-best img {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--pink);
+    border-radius: 50%;
+
+}
+#ertekel{
+    padding-top: 10px;
+    padding-right: 20px;
+    text-align: end;
+    line-height: 0.5ren;
+}
+
+.slide-img{
+    height: 30px;
+    float: left;
+    margin-right: 40px;
+}
+
+#footer_vc{
+    background-color: var(--sotet_szurke);
+}
+
 
 @media screen and (max-width :576px) {
     #header_1sor img {
