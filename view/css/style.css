@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Helvetica Neue";
-    src: url("https://fonts.google.com/?query=helvetica") format("woff");
-}
 :root {
     --feher: #ffffff;
     --vilagos_szurke: #F2F2F2;
@@ -24,7 +20,10 @@ h1 {
     font-size: 24px;
 }
 
-body{background-color: var(--feher);}
+body{background-color: var(--feher);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
 
 #header_1sor{
     background-color: var(--vilagos_szurke);
@@ -70,6 +69,7 @@ hr{
     box-shadow: 5px 5px 20px #9F9F9F48;
 
 }
+
 #hirek-slide{
     margin-bottom: 40px;
 }

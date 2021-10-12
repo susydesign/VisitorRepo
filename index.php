@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
     <!-- >
-            1Pt2,15
-            "Mert Isten akarata az, hogy jót cselekedve némítsátok el az értelmetlen emberek tudatlanságát"
+    1Pt2,15
+    "Mert Isten akarata az, hogy jót cselekedve némítsátok el az értelmetlen emberek tudatlanságát"
     -->
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vistor Care</title>
+    <title>Visitor Care</title>
+    
     <meta name="googlebot" content="noindex">
+    <link rel="shortcut icon" type="image/png" href="./view/images/svg/Visitor-Care-logo.svg" />
+
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="./view/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./view/css/belepes.css">
 
 </head>
 <body>
@@ -34,10 +38,17 @@
                             <p class="eltunik" style="color: #4a4a4a;">E-mail:</p>
                             <p>info@visitorcare.eu</p>
                     </div>
-
                     <div id="gombok" class="col-12 d-flex justify-content-end col-md-3 gap-2 px-auto">
-                        <button class="btn" type="button" style="width: 100px; margin-right: 15px;">Belépés</button>
-                        <button class="btn" type="button" style="width: 100px;">Regisztráció</button>
+                        <button id="gomb_reg" class="btn" type="button" style="width: 100px;">Regisztráció</button>
+                        <button id="gomb_log" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModalLog" style="width: 100px; margin-right: 15px;">Belépés</button>
+                        <button id="gomb_kilep" class="btn" type="button" style="width: 100px; margin-right: 15px;">Kilépés</button>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <p id="info_userId"></p>
+                        <p id="info_userNev"></p>
                     </div>
                 </div>
             </div>
@@ -533,7 +544,9 @@
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- Footer -->
+        <!-- Footer VÉGE -->
+
+
 
 
 
@@ -542,6 +555,58 @@
 
     </div>
 
+
+
+
+
+<!-- Modal belépés -->
+  <div class="modal fade" id="myModalLog" tabindex="-1" aria-labelledby="myModalLogLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content container" id="beregModal-content">
+
+        <div class="row">
+
+          <div class="col-md-5 justify-content-center" id="beregModal-content-bal">
+            <img src="./view/images/svg/Visitor-Care-logo.svg" alt="VisitorCareLogo" class="text-center">
+            <p class="text-center p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas impedit doloremque optio quidem, voluptatem atque et incidunt consequuntur.</p>
+
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>                 
+            </ul>
+
+          </div>
+    
+          <div class="col-md-7" id="beregModal-content-jobb">
+            
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLogLabel">Belépés</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+              
+            <div class="modal-body">
+              <!-- Bejelentkezés form-->
+              <div class="col-12" style="margin-bottom: 10px;">
+                  <input type="text" class="form-control" id="felh_nev" name="felh_nev" placeholder="Felhasználónév" aria-label="felh_nev" required autofocus>
+              </div>
+              <div class="col-12">
+                <input type="password" class="form-control" id="jelszo" name="jelszo" placeholder="Jelszó" aria-label="password name" required autofocus>
+              </div>
+            </div>
+              
+            <div class="modal-footer">
+              <button id="modal_btnlog" type="button" class="btn btn-primary">Belépés</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Belépés VÉGE -->
     
 
 
@@ -551,6 +616,6 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <script src="./js/hw.js"></script>
+    <script src="./js/belepes.js"></script>
 </body>
 </html>

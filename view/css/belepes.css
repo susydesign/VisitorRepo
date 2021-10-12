@@ -1,0 +1,63 @@
+:root {
+    --vilkek : #0dabc8;
+    --zoldkek: #50D5DD;
+    --sfekete: #23303D;
+    --vilfekete: #23353D;
+    --zold:#33C18A;
+    --lila:#8B69C0;
+    --kek: #1EBDE2;
+    --szurke:#F0F0F3;
+}
+
+select {
+    border-radius: 45px;
+    color: var(--vilfekete);
+    box-shadow: -7px -7px 20px #f0f0f3;
+}
+
+option {
+    color : var(--vilfekete)
+}
+
+#gomb_kilep{
+    display: none
+}
+#gomb_reg{
+    display: none;
+}
+
+#beregModal-content{
+    width: 165%;
+    border-radius: 28px;
+}
+
+#beregModal-content-bal{
+    background:linear-gradient(145deg, #4A8DF2 0%, #00BCD4 50%, #50D4DD 100%);
+    border-radius: 28px 0px 0px 28px;}
+
+    #beregModal-content-bal img {
+        max-width: 200px;
+    }
+    #beregModal-content-bal p {
+        color: white;
+    }
+    #beregModal-content-bal ul{
+        list-style-type: none;
+    }
+    #beregModal-content-bal li i{
+        max-width: 20px;
+        color: #ffffff;
+        float: left;
+        margin-left: 10px;
+    }
+    .beregModal-socikon {
+        color: white;
+        width: 20px;
+    }
+
+    #beregModal-content-jobb{
+    padding-left: 30px;
+    padding-right: 60px;
+    background-color: #F0F0F3;
+    border-radius: 0px 28px 28px 0px;
+}
