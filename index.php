@@ -39,7 +39,6 @@
                             <p>info@visitorcare.eu</p>
                     </div>
                     <div id="gombok" class="col-12 d-flex justify-content-end col-md-3 gap-2 px-auto">
-                        <button id="gomb_reg" class="btn" type="button" style="width: 100px;">Regisztráció</button>
                         <button id="gomb_log" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModalLog" style="width: 100px; margin-right: 15px;">Belépés</button>
                         <button id="gomb_kilep" class="btn" type="button" style="width: 100px; margin-right: 15px;">Kilépés</button>
 
@@ -49,6 +48,14 @@
                     <div class="col-12 d-flex justify-content-center">
                         <p id="info_userId"></p>
                         <p id="info_userNev"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center">
+                        <button id="gomb_reg_p" class="btn" type="button" style="width: 100px;">Új Praxis</button>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center">
+                        <button id="gomb_reg_a" class="btn" type="button" style="width: 100px;">Új Ápoló</button>
                     </div>
                 </div>
             </div>

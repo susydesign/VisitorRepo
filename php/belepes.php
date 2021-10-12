@@ -23,7 +23,12 @@ if($result)  // Sikeres utasítás
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             $db_felh_nev = $row['felh_nev'];
             $db_felh_id = $row['felh_id'];
-            $msg = array('felh_nev'=>$db_felh_nev, 'felh_id' => $db_felh_id);
+            $db_felh_role = $row['role'];
+            $msg = array(
+                        'felh_nev'=>$db_felh_nev, 
+                        'felh_id' => $db_felh_id, 
+                        'role' => $db_felh_role
+                    ); 
         }
 
     }else{ //nincs ilyen felhasználó      

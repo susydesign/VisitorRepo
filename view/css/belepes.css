@@ -22,7 +22,10 @@ option {
 #gomb_kilep{
     display: none
 }
-#gomb_reg{
+#gomb_reg_p{
+    display: none;
+}
+#gomb_reg_a{
     display: none;
 }
 
