@@ -11,15 +11,16 @@
     <title>Visitor Care</title>
     
     <meta name="googlebot" content="noindex">
-    <link rel="shortcut icon" type="image/png" href="./view/images/svg/Visitor-Care-logo.svg" />
+    <link rel="shortcut icon" type="image/png" href="./images/svg/Visitor-Care-logo.svg" />
 
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="./view/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./view/css/belepes.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/belepes.css">
+    <link rel="stylesheet" type="text/css" href="./css/regisztracio.css">
 
 </head>
 <body>
@@ -29,7 +30,7 @@
             <div class="col-12 col-md-10" style="padding-top:10px;padding-bottom:10px">
                 <div class="row">
                     <div id="logodiv" class="col-3 d-flex justify-content-start col-md-4">
-                        <img src="../view/images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
+                        <img src="../images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
                     </div>
                     <div id="kontaktok" class="col-9 d-flex justify-content-end col-md-5 " style="padding-top: 5px;">
                             <p class="eltunik" style="color: #4a4a4a;">Ügyfélszolgálat:</p>
@@ -52,10 +53,10 @@
                 </div>
                 <div class="row">
                     <div class="col-6 d-flex justify-content-center">
-                        <button id="gomb_reg_p" class="btn" type="button" style="width: 100px;">Új Praxis</button>
+                        <button id="gomb_reg_p" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regP" style="width: 100px;">Új Praxis</button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
-                        <button id="gomb_reg_a" class="btn" type="button" style="width: 100px;">Új Ápoló</button>
+                        <button id="gomb_reg_a" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regA" style="width: 100px;">Új Ápoló</button>
                     </div>
                 </div>
             </div>
@@ -108,7 +109,7 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="card">
-                            <img src="./view/images/labor.jpeg" class="card-img-top" alt="...">
+                            <img src="./images/labor.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Adott hír címe</h5>
                                 <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, doloribus harum ut facilis nobis, debitis molestiae porro, molestias aspernatur cumque id recusandae quia sint. Voluptatum dolorum temporibus quo quibusdam excepturi.</p>
@@ -119,7 +120,7 @@
 
             <div class="col-sm-3">
                 <div class="card">
-                            <img src="./view/images/gyogyszer.jpeg" class="card-img-top" alt="...">
+                            <img src="./images/gyogyszer.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Adott hír címe</h5>
                                 <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, doloribus harum ut facilis nobis, debitis molestiae porro, molestias aspernatur cumque id recusandae quia sint. Voluptatum dolorum temporibus quo quibusdam excepturi.</p>
@@ -130,7 +131,7 @@
 
             <div class="col-sm-3">
                 <div class="card">
-                            <img src="./view/images/maszk.jpeg" class="card-img-top" alt="...">
+                            <img src="./images/maszk.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Adott hír címe</h5>
                                 <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, doloribus harum ut facilis nobis, debitis molestiae porro, molestias aspernatur cumque id recusandae quia sint. Voluptatum dolorum temporibus quo quibusdam excepturi.</p>
@@ -141,7 +142,7 @@
  
             <div class="col-sm-3"> 
                 <div class="card">
-                            <img src="./view/images/fogaszat.jpeg" class="card-img-top" alt="...">
+                            <img src="./images/fogaszat.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Adott hír címe</h5>
                                 <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, doloribus harum ut facilis nobis, debitis molestiae porro, molestias aspernatur cumque id recusandae quia sint. Voluptatum dolorum temporibus quo quibusdam excepturi.</p>
@@ -181,7 +182,7 @@
             <div class="col-sm-12 col-md-3">
                 <div class="card text-center justify-content-center" >
                     <div class="justify-content-center">
-                        <img class="card-img-top svgimg" src="./view/images/svg/user.svg">
+                        <img class="card-img-top svgimg" src="./images/svg/user.svg">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
@@ -193,7 +194,7 @@
             <div class="col-sm-12 col-md-3">
                 <div class="card text-center">
                      <div class="justify-content-center">
-                         <img class="card-img-top svgimg" src="./view/images/svg/calendar.svg">
+                         <img class="card-img-top svgimg" src="./images/svg/calendar.svg">
                      </div>
                     <div class="card-body">
                         <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
@@ -205,7 +206,7 @@
             <div class="col-sm-12 col-md-3">
                 <div class="card text-center">
                     <div class="justify-content-center">
-                        <img class="card-img-top svgimg" src="./view/images/svg/checked.svg">
+                        <img class="card-img-top svgimg" src="./images/svg/checked.svg">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
@@ -234,7 +235,7 @@
                 <div class="card card-best">
                     <div class="row">
                         <div class="col-6">
-                            <img class="" src="./view/images/drnosz.jpeg">
+                            <img class="" src="./images/drnosz.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
                             <p>Onnkológus</p>
@@ -253,7 +254,7 @@
                 <div class="card card-best">
                     <div class="row">
                         <div class="col-6">
-                            <img class="rounded-circle" src="./view/images/drno.jpeg">
+                            <img class="rounded-circle" src="./images/drno.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
                             <p>Onnkológus</p>
@@ -273,7 +274,7 @@
                 <div class="card card-best">
                     <div class="row">
                         <div class="col-6">
-                            <img class="rounded-circle" src="./view/images/dr.jpeg">
+                            <img class="rounded-circle" src="./images/dr.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
                             <p>Fogorvos</p>
@@ -293,7 +294,7 @@
                 <div class="card card-best">
                     <div class="row">
                         <div class="col-6">
-                            <img class="rounded-circle" src="./view/images/szisztens.jpeg">
+                            <img class="rounded-circle" src="./images/szisztens.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
                             <p>Ápoló</p>
@@ -313,7 +314,7 @@
                 <div class="card card-best">
                     <div class="row">
                         <div class="col-6">
-                            <img class="rounded-circle" src="./view/images/drba.jpeg">
+                            <img class="rounded-circle" src="./images/drba.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
                             <p>Belgyógyász</p>
@@ -388,25 +389,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>First slide label</h5>
                       <p>Some representative placeholder content for the first slide.</p>
                     </div>
                   </div>
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Second slide label</h5>
                       <p>Some representative placeholder content for the second slide.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="./view/images/svg/partners.svg" class="d-block slide-img" alt="...">
+                    <img src="./images/svg/partners.svg" class="d-block slide-img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Third slide label</h5>
                       <p>Some representative placeholder content for the third slide.</p>
@@ -574,7 +575,7 @@
         <div class="row">
 
           <div class="col-md-5 justify-content-center" id="beregModal-content-bal">
-            <img src="./view/images/svg/Visitor-Care-logo.svg" alt="VisitorCareLogo" class="text-center">
+            <img src="./images/svg/Visitor-Care-logo.svg" alt="VisitorCareLogo" class="text-center">
             <p class="text-center p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas impedit doloremque optio quidem, voluptatem atque et incidunt consequuntur.</p>
 
             <ul>
@@ -601,6 +602,7 @@
               <div class="col-12">
                 <input type="password" class="form-control" id="jelszo" name="jelszo" placeholder="Jelszó" aria-label="password name" required autofocus>
               </div>
+              <div id="pwinfo" class="col-12"></div>
             </div>
               
             <div class="modal-footer">
@@ -615,6 +617,125 @@
   </div>
   <!-- Belépés VÉGE -->
     
+<!-- Modal Praxis regisztráció -->
+<div class="modal fade" id="myModal_regP" aria-labelledby="myModal_regPLabel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content container" id="regModal-content">
+        <div class="row">
+
+          <div class="col-md-5 justify-content-center" id="regModal-content-bal">
+            <img src="./images/svg/Visitor-Care-logo.svg" alt="VisitorCareLogo" class="text-center">
+            <p class="text-center p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas impedit doloremque optio quidem, voluptatem atque et incidunt consequuntur.</p>
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>                 
+            </ul>
+          </div>
+
+          <div class="col-md-7" id="regModal-content-jobb">
+            <div class="modal-header">
+              <h5 class="modal-title" id="myModal_regPabel">Regisztráció</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Regisztrációs ürlap-->
+              <form>
+                <div class="col-md-12">
+                  <label for="inputFelh_name" class="form-label m-2">Fehasználónév</label>
+                  <input type="text" class="form-control" id="input_Felh_name" name="felh_name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword1" class="form-label">Jelszó</label>
+                  <input type="password" class="form-control" id="inputPassword1" name="jelszo">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputPassword2" class="form-label">Jelszó mégegyszer</label>
+                  <input type="password" class="form-control" id="inputPassword2">
+                </div>
+            </form>
+            <div class="col-ms-12 m-2">
+                <input class="text-ms-start" type="checkbox" id="chb_tobb" name="chb_tobb">
+                <label>További adatok...</a></label>
+            </div>
+            <div class="col-sm-12 p-2" id="tobbadat">
+                <h1>További adatok</h1>
+                    <div class="col-12">
+                        <label for="inputEmail" class="form-label m-2">Email</label>
+                        <input type="email" class="form-control" id="input_Email" name="email">
+                    </div>
+                    <div class="col-8">
+                    <label for="inputLastname" class="form-label">Vezetéknév</label>
+                    <input type="text" class="form-control" name="last_name" id="inputLastname" placeholder="Családi név">
+                  </div>
+                  <div class="col-4">
+                    <label for="inputFirstname" class="form-label">Kesresztnév</label>
+                    <input type="text" class="form-control" id="inputFirstname" name="first_name">
+                  </div>
+
+                  <div class="col-6">
+                    <label for="inputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email">
+                  </div>
+                  <div class="col-6">
+                    <label for="inputPhone" class="form-label">Telefon</label>
+                    <input type="text" class="form-control" id="inputPhone" name="phone">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputCountry" class="form-label">Ország</label>
+                    <input type="text" class="form-control" id="inputCountry" name="u_address_orszag" value="Magyarország">
+                  </div>
+                  <div class="col-2">
+                    <label for="inputZip" class="form-label">Irányítószám</label>
+                    <input type="text" class="form-control" id="inputZip" name="u_address_irsz">
+                  </div>
+                  <div class="col-5">
+                    <label for="inputCity" class="form-label">Város</label>
+                    <input type="text" class="form-control" id="inputCity" name="u_address_varos">
+                  </div>
+                  <div class="col-5">
+                    <label for="inputStreet" class="form-label">Utca</label>
+                    <input type="text" class="form-control" id="inputStreet" placeholder="pl.: Cement utca" name="u_address_utca">
+                  </div>
+                  <div class="col-3">
+                    <label for="inputHsz" class="form-label">Házszám</label>
+                    <input type="text" class="form-control" id="inputHsz" name="u_address_hsz">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputEm" class="form-label">Emelet</label>
+                    <input type="text" class="form-control" id="inputEm" name="u_address_em">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputDoor" class="form-label">Ajtó</label>
+                    <input type="text" class="form-control" id="inputDoor" name="u_address_ajto">
+                  </div>
+                  <div class="col-md-3">
+                    <label for="inputHrsz" class="form-label">HRSZ</label>
+                    <input type="text" class="form-control" id="inputHrsz" placeholder="Helyrajzi szám" name="u_address_hrsz">
+                  </div>
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <div class="col-ms-12">
+                <input class="text-ms-start" type="checkbox" id="chb_aszf" name="chb_aszf">
+                  <label>Elfogadom az <a href="#">ÁSZF-ben foglaltakat.</a></label>
+              </div>
+              <div class="col-sm-12">
+                <input class="text-sm-start" type="checkbox" id="chb_gdpr" name="chb_gdpr">
+                  <label>Elfogadom az <a href="#">GDPR szabályzatot.</a></label>
+              </div>
+              <button id="modal_btnreg" type="button" class="btn btn-primary">Regisztráció</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
+            </div>
+          </div>          
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Praxis reg Vége -->
 
 
 
@@ -623,6 +744,9 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
     <script src="./js/belepes.js"></script>
+    <script src="./js/regisztracio.js"></script>
+    <script src="./js/service.js"></script>
 </body>
 </html>
