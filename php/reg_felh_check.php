@@ -38,6 +38,7 @@ if($result)  // Sikeres utasítás
             $msg['jelszo']="jó";
         }else{
             $msg=array('error'=>'NEM JÓ A JELSZÓ!');
+
         }
 
     }else{ //nincs ilyen felhasználó      

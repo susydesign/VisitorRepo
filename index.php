@@ -602,7 +602,6 @@
               <div class="col-12">
                 <input type="password" class="form-control" id="jelszo" name="jelszo" placeholder="Jelszó" aria-label="password name" required autofocus>
               </div>
-              <div id="pwinfo" class="col-12"></div>
             </div>
               
             <div class="modal-footer">
@@ -636,7 +635,7 @@
 
           <div class="col-md-7" id="regModal-content-jobb">
             <div class="modal-header">
-              <h5 class="modal-title" id="myModal_regPabel">Regisztráció</h5>
+              <h5 class="modal-title" id="myModal_regPabel">Magán praxis Regisztráció</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -654,6 +653,8 @@
                   <label for="inputPassword2" class="form-label">Jelszó mégegyszer</label>
                   <input type="password" class="form-control" id="inputPassword2">
                 </div>
+                <div id="pwinfo" class="col-12"></div>
+
             </form>
             <div class="col-ms-12 m-2">
                 <input class="text-ms-start" type="checkbox" id="chb_tobb" name="chb_tobb">

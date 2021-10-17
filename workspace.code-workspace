@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\homeingway\\homeingway_web"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "..\\..\\homeingway\\homeingway_web"
 		}
 	],
 	"settings": {}

@@ -1,12 +1,8 @@
 :root {
-    --vilkek : #0dabc8;
-    --zoldkek: #50D5DD;
+    --pink : #E6426E;
     --sfekete: #23303D;
     --vilfekete: #23353D;
-    --zold:#33C18A;
-    --lila:#8B69C0;
-    --kek: #1EBDE2;
-    --szurke:#F0F0F3;
+    --szurke:#656565;
 }
 
 select {
@@ -26,7 +22,7 @@ option {
 }
 
 #regModal-content-bal{
-    background:linear-gradient(145deg, #4A8DF2 0%, #00BCD4 50%, #50D4DD 100%);
+    background:linear-gradient(145deg, #BF214B 0%, #E6426E 100%);
     border-radius: 28px 0px 0px 28px;}
 
     #regModal-content-bal img {

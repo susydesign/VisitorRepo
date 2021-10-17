@@ -1,26 +1,23 @@
 $("#myModal_regP").focus(function(){
+   
+    $("#inputPassword2").focusout(function(){
+        var felh_name=$("#input_Felh_name").val();
+        var jelszo1 = $("#inputPassword1").val();
+        var jelszo2 = $("#inputPassword2").val();
+        
+        if(input_check()){
+            alert("");
 
-    
-    $("#jelszo2").focusout(function(){
-        alert("Praxis felvitel")
-        pw_eqv();
-    });
-
-
-    function pw_eqv(){
-        var jelszo1 = $("#jelszo1").val();
-        var jelszo2 = $("#jelszo2").val();
+        };
 
         if(jelszo1 != jelszo2){
             $("#pwinfo").html("A két jelszó nem egyezik");
         }else{
-            pw_check(jelszo1);
+            felh_check(felh_name);
         }
-    }
+    });
     
-    
-    
-    function pw_check(jelszo1){
+    function felh_check(felh_name){
 
         var respons = true;
         $.ajax({

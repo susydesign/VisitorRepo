@@ -3,7 +3,7 @@ $(document).ready(function () {
   $('#modal_btnlog').click(function(){
    
     var felh_nev = $("#felh_nev").val();
-/*     var jelszo = $('#jelszo').val(); */
+    var jelszo = $('#jelszo').val();
 
 load_data();
 
@@ -15,13 +15,16 @@ function load_data()
           method: "POST",
           dataType: "json",
           cache: false,
-          data:{felh_nev:felh_nev},
+          data:{
+            felh_nev:felh_nev,
+            jelszo:jelszo
+          },
           error: function(request){
             alert('Ajax error: '+request.resposeText+'  p: '+felh_nev);
         },
           success: function (data) {
-            if(data.felh_nev == 'Nincs'){
-              alert("Nincs ilyen felhasználó");
+            if(data.error != ''){
+              alert(data.error);
               location.reload();
             }else{
               var akt_user_id = data.felh_id;
