@@ -1,6 +1,6 @@
 <?php
 
-$jelszo = "44VisitorCare88";
+$jelszo = "123456";
 $jelszo_bad = "44VisitorCare8";
 
 $titkositott_jelszo = password_hash($jelszo, PASSWORD_DEFAULT);

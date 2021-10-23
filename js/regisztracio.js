@@ -1,59 +1,53 @@
 $(document).ready(function () {
 
-$('#chb_tobb').click(function(){
-  var checkBox = document.getElementById("chb_tobb");
-  if (checkBox.checked == true){
-    $('#tobbadat').css("display", "block");
-  } else {
-    $('#tobbadat').css("display", "none");
-  }
-  
-  
-})
 
-  $('#modal_btnreg').click(function(){
-    var felh_name = $("#input_Felh_name").val();
-    var email = $("#input_Email").val();
+  $('#gomb_k_mentes').click(function(){
 
-/*    
-var jelszo = $("#inputPassword1").val();
-    var email = $("#inputEmail").val();
-    var phone = $("#inputPhone").val();
-    var u_address_orszag = $("#inputCountry").val();
-    var u_address_irsz = $("#inputZip").val();
-    var u_address_varos = $("#inputCity").val();
-    var u_address_utca = $("#inputStreet").val();
-    var u_address_hsz = $("#inputHsz").val();
-    var u_address_em = $("#inputEm").val();
-    var u_address_ajto = $("#inputDoor").val();
-    var u_address_hrsz = $("#inputHrsz").val();
- */
+    var klinika_nev = $("#inp_klinika_nev").val();
+    var k_address_orszag = $("#inp_k_address_orszag").val();
+    var k_address_irsz = $("#inp_k_address_irsz").val();
+    var k_address_varos = $("#inp_k_address_varos").val();
+    var k_address_utca = $("#inp_k_address_utca").val();
+    var k_address_hsz = $("#inp_k_address_hsz").val();
+    var k_phone = $("#inp_k_phone").val();
+    var k_mobil = $("#inp_k_mobil").val();
+    var k_web = $("#inp_k_web").val();
+    var k_logo = $("#inp_k_logo").val();
+    var k_rolunk = $("#inp_k_rolunk").val();
+    var geoframe = $("#inp_geoframe").val();
 
-    if(felh_name != ''/*  && jelszo !='' */){
+
+
+
+    if(klinika_nev != ''){
       $.ajax({
-        url: "../php/regisztracio.php",
+        url: "../php/reg_klinika.php",
         method: "POST",
         dataType: "json",
         cash: false,
         data:{
-              felh_name:felh_name, 
-              email:email
-            },
-/* 
-        data:{felh_name:felh_name, last_name:last_name,first_name:first_name,email:email,phone:phone,u_address_orszag:u_address_orszag,u_address_irsz:u_address_irsz,u_address_varos:u_address_varos,u_address_utca:u_address_utca,u_address_hsz:u_address_hsz,u_address_em:u_address_em,u_address_ajto:u_address_ajto,u_address_hrsz:u_address_hrsz},
-
- */
+          klinika_nev:klinika_nev, 
+          k_address_orszag:k_address_orszag,
+          k_address_irsz:k_address_irsz,
+          k_address_varos:k_address_varos,
+          k_address_utca:k_address_utca,
+          k_address_hsz:k_address_hsz,
+          k_phone:k_phone,
+          k_mobil:k_mobil,
+          k_web:k_web,
+          k_logo:k_logo,
+          k_rolunk:k_rolunk,
+          geoframe:geoframe
+        },
         error: function(request){
           alert('Ajax error: '+request.responsText);
         },
         success: function (data) {
-          if(data.error == "Van"){
-            alert("Hiba ág");
+          if(data.error != ""){
+            alert("Hiba ág: "+data.error);
             location.reload()
           }else{
-            $('#myModalReg').modal('hide');
-            $('#info_text').html(data.felh_name);
-            gombrendez(data.felh_name, data.user_id);
+            alert(data.klinika_nev);
           }
         }
       });
@@ -67,24 +61,6 @@ var jelszo = $("#inputPassword1").val();
     location.reload();
   })
 
-  function gombrendez(felhasznalo, felh_id){
-    var aktuser = felhasznalo;
-    var aktid = felh_id;
-
-    if(aktuser !=""){
-      document.getElementById("gomb_log").style.display="none";
-      document.getElementById("gomb_reg").style.display="none";
-      document.getElementById("gomb_kilep").style.display="block";
-      $('#info_userId').html(aktid);
-      $('#info_userNev').html(aktuser);
-      $('#cegSelect').css('display','block');
-    }else{
-      document.getElementById("gomb_kilep").style.display="none";
-      document.getElementById("gomb_log").style.display="block";
-      document.getElementById("gomb_reg").style.display="block";
-  //    document.getElementById("gomm_log").innerHTML="Bejelentkezés";
-    }
-  }
 
 
 })

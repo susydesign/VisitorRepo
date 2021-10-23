@@ -52,13 +52,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 d-flex justify-content-center">
-                        <button id="gomb_reg_p" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regP" style="width: 100px;">Új Praxis</button>
-                    </div>
-                    <div class="col-6 d-flex justify-content-center">
-                        <button id="gomb_reg_a" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regA" style="width: 100px;">Új Ápoló</button>
-                    </div>
-                </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <a id="gomb_reg_p" href="../php/uj_klinika.php" class="btn" role=button Style="width:200px">Új Magánklinika</a>
+<!--                         
+                        <button id="gomb_reg_p" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regK" style="width: 200px;">Új Magánklinika </button>
+
+ -->                    </div>
             </div>
             <div class="col-1 col-md-1 d-none d-md-block"></div>
         </div>
@@ -617,7 +616,7 @@
   <!-- Belépés VÉGE -->
     
 <!-- Modal Praxis regisztráció -->
-<div class="modal fade" id="myModal_regP" aria-labelledby="myModal_regPLabel" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="myModal_regK" aria-labelledby="myModal_regKLabel" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content container" id="regModal-content">
         <div class="row">
@@ -635,14 +634,14 @@
 
           <div class="col-md-7" id="regModal-content-jobb">
             <div class="modal-header">
-              <h5 class="modal-title" id="myModal_regPabel">Magán praxis Regisztráció</h5>
+              <h5 class="modal-title" id="myModal_regKabel">Magánklinika Regisztráció</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <!-- Regisztrációs ürlap-->
               <form>
                 <div class="col-md-12">
-                  <label for="inputFelh_name" class="form-label m-2">Fehasználónév</label>
+                  <label for="inputFelh_name" class="form-label m-2">Klinka neve</label>
                   <input type="text" class="form-control" id="input_Felh_name" name="felh_name">
                 </div>
                 <div class="col-md-6">
