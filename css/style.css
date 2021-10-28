@@ -145,6 +145,17 @@ hr{
     border-radius: 50%;
 
 }
+#address{
+    padding-top: 10px;
+    padding-right: 20px;
+    text-align: end;
+    line-height: 0.5ren;
+}
+
+#klinika-2, #klinika-3, #klinika-3,#klinika-4, #klinika-5{
+    display: none;
+}
+
 #ertekel{
     padding-top: 10px;
     padding-right: 20px;

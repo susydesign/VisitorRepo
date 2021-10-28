@@ -220,6 +220,127 @@
 
     </div>
 
+    <div id="klinikaink" class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div style="text-align: center;">
+                    <h1 class="p-2" style="color: #E6426E">Magánklinikák</h1>
+                    <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tenetur ipsam quo consequatur, blanditiis delectus. Omnis sequi et veritatis voluptatibus beatae ipsum molestias, quae ipsam quisquam aliquam rerum ab in.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-2" id="klinika-1" >
+                <div class="card card-best">
+                    <div class="row">
+                        <div class="col-6">
+                            <img id="k_logo_1" class="" src="">
+                        </div>
+                    <div id="address" class="col-6 justify-content-end">
+                            <p id="varos_1"></p>
+                            <p id="utca_hsz_1"></p>
+                            <p id="phone_1"></p>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 id="klinika_nev_1"class="card-title"></h5>
+                        <p id="rolunk_1" class="card-text"></p>
+                    </div>
+                    <a id="gomb_klinik" href="#" class="col-6 btn m-2">Megnézem</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2" id="klinika-2">
+                <div class="card card-best">
+                <div class="row">
+                        <div class="col-6">
+                            <img id="k_logo_2" class="" src="./images/klinikak/2.png">
+                        </div>
+                        <div id="address" class="col-6 justify-content-end">
+                            <p id="varos_2"></p>
+                            <p id="utca_hsz_2"></p>
+                            <p id="phone_2"></p>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 id="klinika_nev_2"class="card-title"></h5>
+                        <p id="rolunk_2" class="card-text"></p>
+                    </div>
+                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-2" id="klinika-3">
+                <div class="card card-best">
+                <div class="row">
+                        <div class="col-6">
+                            <img id="k_logo_3" class="" src="./images/klinikak/3.png">
+                        </div>
+                        <div id="address" class="col-6 justify-content-end">
+                            <p id="varos_3"></p>
+                            <p id="utca_hsz_3"></p>
+                            <p id="phone_3"></p>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 id="klinika_nev_3"class="card-title"></h5>
+                        <p id="rolunk_3" class="card-text"></p>
+                    </div>
+                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-2" id="klinika-4">
+                <div class="card card-best">
+                <div class="row">
+                        <div class="col-6">
+                            <img id="k_logo_4" class="" src="./images/klinikak/4.png">
+                        </div>
+                        <div id="address" class="col-6 justify-content-end">
+                            <p id="varos_4"></p>
+                            <p id="utca_hsz_4"></p>
+                            <p id="phone_4"></p>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 id="klinika_nev_4"class="card-title"></h5>
+                        <p id="rolunk_4" class="card-text"></p>
+                    </div>
+                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-2" id="klinika-5">
+                <div class="card card-best">
+                <div class="row">
+                        <div class="col-6">
+                            <img id="k_logo_5" class="" src="./images/klinikak/5.png">
+                        </div>
+                        <div id="address" class="col-6 justify-content-end">
+                            <p id="varos_5"></p>
+                            <p id="utca_hsz_5"></p>
+                            <p id="phone_5"></p>
+                       </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 id="klinika_nev_5"class="card-title"></h5>
+                        <p id="rolunk_5" class="card-text"></p>
+                    </div>
+                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                </div>
+
+            </div>
+                        
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
     <div id="bestszakik" class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
@@ -553,13 +674,6 @@
         </footer>
         <!-- Footer VÉGE -->
 
-
-
-
-
-
-
-
     </div>
 
 
@@ -615,129 +729,6 @@
   </div>
   <!-- Belépés VÉGE -->
     
-<!-- Modal Praxis regisztráció -->
-<div class="modal fade" id="myModal_regK" aria-labelledby="myModal_regKLabel" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content container" id="regModal-content">
-        <div class="row">
-
-          <div class="col-md-5 justify-content-center" id="regModal-content-bal">
-            <img src="./images/svg/Visitor-Care-logo.svg" alt="VisitorCareLogo" class="text-center">
-            <p class="text-center p-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas impedit doloremque optio quidem, voluptatem atque et incidunt consequuntur.</p>
-            <ul>
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>                 
-            </ul>
-          </div>
-
-          <div class="col-md-7" id="regModal-content-jobb">
-            <div class="modal-header">
-              <h5 class="modal-title" id="myModal_regKabel">Magánklinika Regisztráció</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- Regisztrációs ürlap-->
-              <form>
-                <div class="col-md-12">
-                  <label for="inputFelh_name" class="form-label m-2">Klinka neve</label>
-                  <input type="text" class="form-control" id="input_Felh_name" name="felh_name">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputPassword1" class="form-label">Jelszó</label>
-                  <input type="password" class="form-control" id="inputPassword1" name="jelszo">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputPassword2" class="form-label">Jelszó mégegyszer</label>
-                  <input type="password" class="form-control" id="inputPassword2">
-                </div>
-                <div id="pwinfo" class="col-12"></div>
-
-            </form>
-            <div class="col-ms-12 m-2">
-                <input class="text-ms-start" type="checkbox" id="chb_tobb" name="chb_tobb">
-                <label>További adatok...</a></label>
-            </div>
-            <div class="col-sm-12 p-2" id="tobbadat">
-                <h1>További adatok</h1>
-                    <div class="col-12">
-                        <label for="inputEmail" class="form-label m-2">Email</label>
-                        <input type="email" class="form-control" id="input_Email" name="email">
-                    </div>
-                    <div class="col-8">
-                    <label for="inputLastname" class="form-label">Vezetéknév</label>
-                    <input type="text" class="form-control" name="last_name" id="inputLastname" placeholder="Családi név">
-                  </div>
-                  <div class="col-4">
-                    <label for="inputFirstname" class="form-label">Kesresztnév</label>
-                    <input type="text" class="form-control" id="inputFirstname" name="first_name">
-                  </div>
-
-                  <div class="col-6">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" name="email">
-                  </div>
-                  <div class="col-6">
-                    <label for="inputPhone" class="form-label">Telefon</label>
-                    <input type="text" class="form-control" id="inputPhone" name="phone">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputCountry" class="form-label">Ország</label>
-                    <input type="text" class="form-control" id="inputCountry" name="u_address_orszag" value="Magyarország">
-                  </div>
-                  <div class="col-2">
-                    <label for="inputZip" class="form-label">Irányítószám</label>
-                    <input type="text" class="form-control" id="inputZip" name="u_address_irsz">
-                  </div>
-                  <div class="col-5">
-                    <label for="inputCity" class="form-label">Város</label>
-                    <input type="text" class="form-control" id="inputCity" name="u_address_varos">
-                  </div>
-                  <div class="col-5">
-                    <label for="inputStreet" class="form-label">Utca</label>
-                    <input type="text" class="form-control" id="inputStreet" placeholder="pl.: Cement utca" name="u_address_utca">
-                  </div>
-                  <div class="col-3">
-                    <label for="inputHsz" class="form-label">Házszám</label>
-                    <input type="text" class="form-control" id="inputHsz" name="u_address_hsz">
-                  </div>
-                  <div class="col-md-3">
-                    <label for="inputEm" class="form-label">Emelet</label>
-                    <input type="text" class="form-control" id="inputEm" name="u_address_em">
-                  </div>
-                  <div class="col-md-3">
-                    <label for="inputDoor" class="form-label">Ajtó</label>
-                    <input type="text" class="form-control" id="inputDoor" name="u_address_ajto">
-                  </div>
-                  <div class="col-md-3">
-                    <label for="inputHrsz" class="form-label">HRSZ</label>
-                    <input type="text" class="form-control" id="inputHrsz" placeholder="Helyrajzi szám" name="u_address_hrsz">
-                  </div>
-
-              </div>
-            </div>
-            <div class="modal-footer">
-              <div class="col-ms-12">
-                <input class="text-ms-start" type="checkbox" id="chb_aszf" name="chb_aszf">
-                  <label>Elfogadom az <a href="#">ÁSZF-ben foglaltakat.</a></label>
-              </div>
-              <div class="col-sm-12">
-                <input class="text-sm-start" type="checkbox" id="chb_gdpr" name="chb_gdpr">
-                  <label>Elfogadom az <a href="#">GDPR szabályzatot.</a></label>
-              </div>
-              <button id="modal_btnreg" type="button" class="btn btn-primary">Regisztráció</button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Mégse</button>
-            </div>
-          </div>          
-
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- Praxis reg Vége -->
-
-
 
     <!-- Scriptek -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
@@ -746,7 +737,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 
     <script src="./js/belepes.js"></script>
-    <script src="./js/regisztracio.js"></script>
+    <script src="./js/reg_klinika.js"></script>
     <script src="./js/service.js"></script>
+    <script src="./js/load_klinikak.js"></script>
 </body>
 </html>

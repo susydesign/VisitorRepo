@@ -142,8 +142,11 @@
                     <input type="text" class="form-control" id="inp_geoframe" name="inp_geoframe">
                 </div>
     
-                <div class="col-12" id="gomb_k_mentes">
+                <div class="col-6 d-flex" id="gomb_k_mentes">
                     <button type="submit" class="btn btn-primary">Mentés</button>
+                </div>            
+                <div class="col-6 d-flex" id="gomb_megse">
+                <a id="gomb_megse" href="../index.php" class="btn" role=button Style="width:200px">Mégse</a>
                 </div>            
     
             </form>
@@ -297,7 +300,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 
-    <script src="../js/regisztracio.js"></script>
+    <script src="../js/reg_klinika.js"></script>
     <script src="../js/service.js"></script>
 </body>
 </html>

@@ -5,11 +5,6 @@ $("#myModal_regP").focus(function(){
         var jelszo1 = $("#inputPassword1").val();
         var jelszo2 = $("#inputPassword2").val();
         
-        if(input_check()){
-            alert("");
-
-        };
-
         if(jelszo1 != jelszo2){
             $("#pwinfo").html("A két jelszó nem egyezik");
         }else{

@@ -56,9 +56,9 @@ $(document).ready(function () {
     }
   })
 
-  $('#gomb_kilep').click(function() {
-    $('#info_text').html('');
-    location.reload();
+  $('#gomb_megse').click(function() {
+    window.close()
+    location.reload("../index.php");
   })
 
 
