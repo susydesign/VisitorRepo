@@ -11,6 +11,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 13px;
 }
@@ -56,6 +57,18 @@ hr{
     font-weight: bold;
 }
 
+#btn-valaszt {
+    width: 200px;;
+    border-radius: 45px;
+    background-color: var(--feher);
+    box-shadow:none;
+    color: var(--pink);
+}
+#btn-valaszt :hover {
+    background-color: var(--feher);
+    color: var(--szurke);
+}
+
 .btn {
     border-radius: 45px;
     background-color: var(--pink);
@@ -99,8 +112,13 @@ hr{
 }
 
 .valaszt{
-    border-radius: 20px;
-    padding:20px;
+     font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+ 
+     border-radius: 20px;
+    width: 20%;
+    padding:15px;
+    margin-right: 20px;
     background-color: white;
 }
 .valaszt h3 {
@@ -156,6 +174,17 @@ hr{
     display: none;
 }
 
+.g_karb {
+    border: 1px solid;
+    border-color: var(--pink);
+    color: var(--sotet_szurke);
+    border-radius: 50%;
+    max-width: 28px;
+    text-align: center;
+    padding: 2px;
+    display: block;
+}
+
 #ertekel{
     padding-top: 10px;
     padding-right: 20px;
@@ -207,4 +236,32 @@ hr{
     p {
         font-size: 0.75rem;
     }
+}
+
+.grid-container{
+    text-align: center;
+    color: white;
+    background-color: var(--pink);
+
+    width: auto;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.d1{
+    grid-row: 1/2;
+    grid-column: 1/6;
+}
+.d2{
+    grid-row: 2/3;
+    grid-column: 1/6;
+}
+.d3{
+    grid-row: 3/4;
+    grid-column: 1/6;
 }

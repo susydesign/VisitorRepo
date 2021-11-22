@@ -16,7 +16,9 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/belepes.css">
@@ -151,27 +153,70 @@
             </div>
         </div>
     </div>        
-    
-    <div id="valaszdki" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 justify-content-md-center">
-                <h1>Válaszd ki, kit keresel!</h1>
-            </div>           
+
+
+
+    <div id="valaszdki" class="grid-container">
+        <div class="d1">
+            <h1>Magánklinika keresése</h1>
         </div>
-        <div class="row justify-content-md-center p-3">
-            <div class="col col-lg-3 valaszt">
-                <h3>Magánpraxist keresek</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquam itaque soluta asperiores beatae dolores ducimus tempora autem, libero et harum consequatur perferendis, rerum eveniet maxime nobis nostrum iste necessitatibus?</p>
-            </div>
-            <div class="col-md-auto"></div>
-            <div class="col col-lg-3 valaszt">
-                <h3>Ápolót/Ápolónőt keresek</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquam itaque soluta asperiores beatae dolores ducimus tempora autem, libero et harum consequatur perferendis, rerum eveniet maxime nobis nostrum iste necessitatibus?</p>
-            </div>
+        <div class="d2">
+            <form>
+                <input id="ker_hol" class="valaszt" type="text" class="form-control" placeholder="  &#xf3c5;  Hol keresel? Pl.: Budapest...">
+                <input id="ker_mit" class="valaszt" type="text" class="form-control" placeholder=" &#xf007;  Mit keresel? Pl.: Szemészet...">
+                <select id="ker_mod" class="valaszt" type="text" class="form-select" >
+                    <option selected>&#xf500;  Ellátás módja</option>
+                    <option>Fenőt</option>
+                    <option>Gyermek</option>
+                    <option>Online</option>
+                    <option>24 órás</option>
+                </select>
+                <input id="ker_ido" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Válaszd ki az időpontot">
+            </form>
+        </div>
+        <div class="d3">
+            <button id="btn-valaszt" class="btn" type="button">Keres</button>
         </div>
     </div>
 
-    <div id="hogyan" class="container">
+
+<!--     
+    <div id="valaszdki" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 justify-content-md-center">
+                <h1>Magánklinika keresése</h1>
+            </div>           
+        </div>
+
+       <div class="row justify-content-md-center p-3">
+           <form>
+                <div class="col-3">
+                    <input id="ker_hol" class="form-control valaszt" placeholder="Hol keresel? Pl.: Budapest...">
+                </div>
+                <div class="col-3">
+                    <input id="ker_mit" class="form-control valaszt" placeholder="Mit keresel? Pl.: Szemészet...">
+                </div>
+                <div class="col-3"></div>
+                    <select id="ker_mod" class="form-select valaszt" aria-label="Default select example">
+                        <option selected>Ellátás módja</option>
+                        <option>Fenőt</option>
+                        <option>Gyermek</option>
+                        <option>Online</option>
+                        <option>24 órás</option>
+                    </select>
+                </div>
+                <div class="col-3"></div>
+                    <input id="ker_ido" class="form-control valaszt" placeholder="Válaszd ki az időpontot">
+                </div>
+                <div class="row">
+                    <div class=col-md-auto>
+                        <button id="btn-valaszt" class="btn btn-primary" type="button" >Keres</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+
+ -->    <div id="hogyan" class="container">
         <div class="row">
             <div class="col-12 m-5">
                 <h1 style="text-align: center;">Hogyan működik a Visitor Care?</h1>
@@ -243,10 +288,14 @@
                        </div>
                     </div>
                     <div class="card-body">
+                        <p id="klinika_id_1" class=""></p>
                         <h5 id="klinika_nev_1"class="card-title"></h5>
                         <p id="rolunk_1" class="card-text"></p>
                     </div>
-                    <a id="gomb_klinik" href="#" class="col-6 btn m-2">Megnézem</a>
+                    <div id="gombok">
+                        <a href="#" class="col-6 btn m-2">Megnézem</a>                   
+                        <a id="gomb_karb_1" class="col-6"><i class="g_karb fas fa-wrench"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-2" id="klinika-2">
@@ -262,10 +311,15 @@
                        </div>
                     </div>
                     <div class="card-body">
+                        <p id="klinika_id_2" class=""></p>
                         <h5 id="klinika_nev_2"class="card-title"></h5>
                         <p id="rolunk_2" class="card-text"></p>
                     </div>
-                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                    <div id="gombok">
+                        <?php ?>
+                        <a href="#" class="col-6 btn m-2">Megnézem</a>
+                        <a id="gomb_karb_2"><i class="g_karb fas fa-wrench"></i></a>
+                    </div>
                 </div>
 
             </div>
@@ -282,10 +336,14 @@
                        </div>
                     </div>
                     <div class="card-body">
+                        <p id="klinika_id_3" class=""></p>
                         <h5 id="klinika_nev_3"class="card-title"></h5>
                         <p id="rolunk_3" class="card-text"></p>
                     </div>
-                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                    <div id="gombok">
+                        <a href="#" class="col-6 btn m-2">Megnézem</a>
+                        <a id="gomb_karb_3"><i class="g_karb fas fa-wrench"></i></a>
+                    </div>
                 </div>
 
             </div>
@@ -302,10 +360,14 @@
                        </div>
                     </div>
                     <div class="card-body">
+                        <p id="klinika_id_4" class=""></p>
                         <h5 id="klinika_nev_4"class="card-title"></h5>
                         <p id="rolunk_4" class="card-text"></p>
                     </div>
-                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                    <div id="gombok">
+                        <a href="#" class="col-6 btn m-2">Megnézem</a>
+                        <a id="gomb_karb_4"><i class="g_karb fas fa-wrench"></i></a>
+                    </div>
                 </div>
 
             </div>
@@ -322,10 +384,14 @@
                        </div>
                     </div>
                     <div class="card-body">
+                        <p id="klinika_id_5" class=""></p>
                         <h5 id="klinika_nev_5"class="card-title"></h5>
                         <p id="rolunk_5" class="card-text"></p>
                     </div>
-                    <a href="#" class="col-6 btn m-2">Megnézem</a>
+                    <div id="gombok">
+                        <a href="#" class="col-6 btn m-2">Megnézem</a>
+                        <a id="gomb_karb_5"><i class="g_karb fas fa-wrench"></i></a>
+                    </div>
                 </div>
 
             </div>
@@ -678,8 +744,6 @@
 
 
 
-
-
 <!-- Modal belépés -->
   <div class="modal fade" id="myModalLog" tabindex="-1" aria-labelledby="myModalLogLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -737,8 +801,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 
     <script src="./js/belepes.js"></script>
-    <script src="./js/reg_klinika.js"></script>
     <script src="./js/service.js"></script>
     <script src="./js/load_klinikak.js"></script>
+
+
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script>
+            $( function() { $( "#ker_ido" ).datepicker(); } );
+        </script>
+
 </body>
 </html>

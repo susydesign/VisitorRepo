@@ -52,6 +52,7 @@ function load_data()
     $('#gomb_reg_p').css("display","none");
     $('#gomb_reg_a').css("display","none");
     $('#gomb_log').css("display","block");
+    $('#gomb_karb').css("display","block");
 location.reload();
   })
 

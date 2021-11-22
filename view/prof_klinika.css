@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+
+}
+:root {
+    --feher: #ffffff;
+    --vilagos_szurke: #F2F2F2;
+    --gomb_szurke:#B9B9B9;
+    --szurke: #707070;
+    --sotet_szurke: #4A4A4A;
+    --pink: #E6426E;
+    --vilagos_pink: #E6426E57;
+
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: var(--feher);
+    display: grid;
+    grid-template-columns: [start] 1fr [fele] 1fr [end];
+    grid-template-rows: [start] 80px [row_header] 100px [row_nav] auto [main_sec] 1fr [footer];
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "section main"
+        "footer footer";
+    height: 100vh;
+}
+
+header{
+    background-color: var(--vilagos_szurke);
+    padding: 20px;
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: [start] 3fr [col-kont] 3fr [col-gombok] 2fr [end];
+    grid-template-rows: [start] 0.5fr [end];
+}
+    #logodiv{
+        grid-area: start/start/col-kont;
+    }
+    #kontaktok{
+        grid-area: start/2/start/3;
+        display: flex;
+        justify-self: end;
+    }
+    #info_user{
+        justify-self: end;
+        grid-area: start/3/start/end;
+        display: flex;
+        color: var(--pink);
+        font-size: 700;
+    }
+/* header elemeivel VÉGE */
+
+nav {
+    background-color: var(--feher);
+    grid-area: nav;
+    align-content: center;
+    display: flex;
+    justify-content: flex-end;
+}
+nav a {
+    color: var(--pink)    
+}
+nav p {
+    color: var(--sotet_szurke);
+    margin: auto;
+    margin-left: 2em;
+}
+nav span {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+
+
+section {
+    background-color: var(--feher);
+    grid-area: section;
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 50px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-rows: repeat(5, minmax(100px, 1fr));
+}
+    #k_logo_1 {
+        border: 1px solid;
+        border-radius: 50%;
+        border-color: var(--pink);
+        max-width: 100px;
+        padding: 3px 3px;
+        grid-area: 1/1/1/2;
+        align-self: center;
+        justify-self: center;
+
+/*         grid-area: k-logo; */
+    }
+    #klinika_nev_1{
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--pink);
+        grid-area: 1/2/1/end;
+        align-self: center;
+/*         grid-area: k-nev; */
+    }
+    #varos_1{
+        grid-area: 2/2/2/3;
+        align-self: flex-start;
+        justify-self: end;
+        font-size: 1rem;
+        font-weight: bold;
+/*         grid-area: k-varos; */
+    }
+    #utca_hsz_1 {
+        grid-area: 2/3/2/end;
+        font-size: 1rem;
+        padding-left: 5px;
+/*         grid-area: k_utca; */
+    }
+    #phone_1 {
+        grid-area: 3/1/3/3;
+        margin-left: 20px;
+        font-size: 1,2rem;
+/*         grid-area: k_phone; */
+    }
+    #rolunk_1 {
+        grid-area: 4/1/4/end;
+        margin-left: 20px
+/*         grid-area: k_rolunk; */
+    }
+    #gomb_klinik {
+        grid-area: 5/1/5/2;
+        height: 50px;
+/*         grid-area: mosdosít; */
+    }
+
+.label_klin{
+    color: var(--pink);
+    margin-top:10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+main {
+    background-color: var(--feher);
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 40px 20px 10px;
+    display: block;
+    grid-area: main;    
+}
+footer {
+    background-color: var(--sotet_szurke);
+    grid-area: footer;
+}
+
