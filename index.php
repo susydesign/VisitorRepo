@@ -288,7 +288,7 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <p id="klinika_id_1" class=""></p>
+                        <p id="klinika_id_1" class="hide"></p>
                         <h5 id="klinika_nev_1"class="card-title"></h5>
                         <p id="rolunk_1" class="card-text"></p>
                     </div>
@@ -311,7 +311,7 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <p id="klinika_id_2" class=""></p>
+                        <p id="klinika_id_2" class="hide"></p>
                         <h5 id="klinika_nev_2"class="card-title"></h5>
                         <p id="rolunk_2" class="card-text"></p>
                     </div>
@@ -336,7 +336,7 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <p id="klinika_id_3" class=""></p>
+                        <p id="klinika_id_3" class="hide"></p>
                         <h5 id="klinika_nev_3"class="card-title"></h5>
                         <p id="rolunk_3" class="card-text"></p>
                     </div>
@@ -360,7 +360,7 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <p id="klinika_id_4" class=""></p>
+                        <p id="klinika_id_4" class="hide"></p>
                         <h5 id="klinika_nev_4"class="card-title"></h5>
                         <p id="rolunk_4" class="card-text"></p>
                     </div>
@@ -384,7 +384,7 @@
                        </div>
                     </div>
                     <div class="card-body">
-                        <p id="klinika_id_5" class=""></p>
+                        <p id="klinika_id_5" class="hide"></p>
                         <h5 id="klinika_nev_5"class="card-title"></h5>
                         <p id="rolunk_5" class="card-text"></p>
                     </div>

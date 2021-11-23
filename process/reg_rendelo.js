@@ -9,6 +9,7 @@ $("#gomb_szak").click(function (e) {
   var szemelyes = $("#szemelyes").is(':checked');
   var online = $("#online").is(':checked');
   var gondozas = $("#gondozas").is(':checked');
+  var r_telefon = $("#r_telefon").val();
   var ar = $("#ar").val();
 
   adatok_ok=true;
@@ -31,6 +32,7 @@ $("#gomb_szak").click(function (e) {
               szemelyes:szemelyes,
               online:online,
               gondozas:gondozas,
+              r_telefon:r_telefon,
               ar:ar
             },
         error: function(request){
@@ -39,6 +41,8 @@ $("#gomb_szak").click(function (e) {
         success: function (data) {
           if(data.error == "0"){
             nyitvatartas(data.rendelo_id);
+            $("#op_rendnev").html(data.rendelo_id);
+            $("#op_rendphone").html(data.r_telefon);
           }else{
             alert("Hiba ág: "+data.error);
           }

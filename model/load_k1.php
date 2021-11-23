@@ -1,4 +1,5 @@
 <?php
+/* load_klinika.js hívja a prof_klinika.php betöltésekor*/
 require_once('connect.php');
 
 if(isset($_POST["klinika_id"])){
@@ -34,7 +35,8 @@ if($result)  // Sikeres utasítás
                 'k_address_hsz' => $row['k_address_hsz'],                       
                 'k_phone' => $row['k_phone'],                       
                 'k_logo' => $row['k_logo'],                       
-                'k_rolunk' => $row['k_rolunk'],                       
+                'k_rolunk' => $row['k_rolunk'],
+                'geoframe' => $row['geoframe'],
                 'error' => "",
                 'index' => $i
             );

@@ -48,15 +48,21 @@
         </nav>
 
         <section>
-                        <img id="k_logo_1" class="" src="">
-                        <h5 id="klinika_nev_1"class="card-title"></h5>
-                        <p id="varos_1"></p>
-                        <p id="utca_hsz_1"></p>
-                        <label for="phone_1" class="label_klin">Telefon</label>
-                        <p id="phone_1"></p>
-                        <label for="rolunk_1" class="label_klin">Klinika leírása</label>
-                        <p id="rolunk_1" class="card-text"></p>
-                        <a id="gomb_klinik" href="#" class="col-6 btn m-2">Módosítás</a>
+              <div id="szekcio-1">
+               <img id="k_logo_1" class="" src="">
+                <h5 id="klinika_nev_1"class="card-title"></h5>
+                <p id="varos_1"></p>
+                <p id="utca_hsz_1"></p>
+                <label for="phone_1" class="label_klin">Telefon</label>
+                <p id="phone_1"></p>
+                <label for="rolunk_1" class="label_klin">Klinika leírása</label>
+                <p id="rolunk_1" class="card-text"></p>
+                <a id="gomb_klinik" href="#" class="col-6 btn m-2">Módosítás</a>
+            </div>
+            <div id="szekczio-2">
+                <div id="terkep_1">
+                </div>
+            </div>
         </section>
 
         <main>Szakrendelő adatai
@@ -163,11 +169,20 @@
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
+                            <span class="input-group-text" style="width: 200px;">Telefon szám</span>
+                        </div>
+                        <input type="text" class="form-control" id="r_telefon" aria-label="phone mumber" placeholder="+36 30 1234567">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-phone-square-alt"></i></span>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
                             <span class="input-group-text" style="width: 200px;">Szolgáltatás ára</span>
                         </div>
                         <input type="text" class="form-control" id="ar" aria-label="Amount (to the nearest Ft)">
                         <div class="input-group-append">
-                            <span class="input-group-text">.00</span>
+                            <span class="input-group-text">Ft/óra</span>
                         </div>
                     </div>
 
@@ -177,6 +192,17 @@
 
 
                 </form >
+            </div>
+            <div id="eredmeny" class="contaniner">
+                <div class="row">
+                    <div class="md-6">
+                        <div id="op_rendnev"></div>
+                    </div>
+                    <div class="md-6">
+                        <div id="op_rendphone"></div>
+                    </div>
+                </div>
+
             </div>
         </main>
         <footer>footer</footer>

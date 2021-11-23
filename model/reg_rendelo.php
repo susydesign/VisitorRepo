@@ -3,8 +3,8 @@
 require_once('connect.php');
 
 
-$sql_in = "INSERT INTO szakrendelo (klinika_id,szak_id,felnot,gyermek,szemelyes,online,nonstop,gondozas,ar) 
-            VALUES (:klinika_id,:szak_id,:felnot,:gyermek,:szemelyes,:online,:nonstop,:gondozas,:ar)";
+$sql_in = "INSERT INTO szakrendelo (klinika_id,szak_id,felnot,gyermek,szemelyes,online,nonstop,gondozas,r_telefon,ar) 
+            VALUES (:klinika_id,:szak_id,:felnot,:gyermek,:szemelyes,:online,:nonstop,:gondozas,:r_telefon,:ar)";
 
 $result_in = $conn->prepare($sql_in);
 
@@ -16,6 +16,7 @@ $result_in->bindParam(':szemelyes', $szemelyes);
 $result_in->bindParam(':online', $online);
 $result_in->bindParam(':nonstop', $nonstop);
 $result_in->bindParam(':gondozas', $gondozas);
+$result_in->bindParam(':r_telefon', $r_telefon);
 $result_in->bindParam(':ar', $ar);
 
 if(isset($_POST["klinika_id"])){
@@ -58,6 +59,11 @@ if(isset($_POST["gondozas"])){
 }else{
     $gondozas = 0;
 };
+if(isset($_POST["r_telefon"])){
+    $r_telefon = 1;
+}else{
+    $r_telefon = 0;
+};
 if(isset($_POST["ar"])){
     $ar = 1;
 }else{
@@ -94,6 +100,7 @@ if($result_in)  // Sikeres INSER utasítás
                 $db_online = $row['online'];
                 $db_nonstop = $row['nonstop'];
                 $db_gondozas = $row['gondozas'];
+                $db_r_telefon = $row['r_telefon'];
                 $db_ar = $row['ar'];
                 
                 $msg = array(
@@ -106,6 +113,7 @@ if($result_in)  // Sikeres INSER utasítás
                     'online' => $db_online,
                     'nonstop' => $db_nonstop,
                     'gondozas' => $db_gondozas,
+                    'r_telefon' => $db_r_telefon,
                     'ar' => $db_ar,
                     'error' => '0'
                 );

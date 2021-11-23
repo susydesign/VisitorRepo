@@ -1,3 +1,5 @@
+/* prof_klinkika.php hívja */
+
 $(document).ready(function () {
 
   var klinika_id=$("#info_userId").html()
@@ -22,12 +24,9 @@ function load_klinika(klinika_id)
 //              location.reload();
             }else{
               var maxklinik = data.length;
-              
               for (i = 0; i<maxklinik; i++){
                 klinik_card_load(data[i],i+1);
-
               }
-
             }
           }
         });
@@ -41,6 +40,7 @@ function load_klinika(klinika_id)
           var akt_k_phone = data.k_phone;
           var akt_k_logo = data.k_logo;
           var akt_k_rolunk = data.k_rolunk;
+          var akt_geoframe = data.geoframe
 
           $("#klinika-"+db).css('display','block');
 
@@ -51,6 +51,7 @@ function load_klinika(klinika_id)
           $('#klinika_id_'+db).html(akt_klinika_id)
           $('#klinika_nev_'+db).html(akt_klinika_nev);
           $('#rolunk_'+db).html(akt_k_rolunk);
+          $('#terkep_'+db).html(akt_geoframe);
 
         }
   }

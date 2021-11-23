@@ -21,6 +21,14 @@ h1 {
     font-size: 24px;
 }
 
+h5 {
+    font-weight: 700;
+}
+
+.hide{
+    display: none;
+}
+
 body{background-color: var(--feher);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
