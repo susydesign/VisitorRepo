@@ -1,6 +1,6 @@
 <?php
 
-require_once('connect.php');
+require_once('../model/connect.php');
 
 
 $sql_in = "INSERT INTO klinika (klinika_nev,k_address_orszag,k_address_irsz,k_address_varos,k_address_utca,k_address_hsz,k_phone,k_mobil,k_web,k_logo,k_rolunk,geoframe) 
