@@ -87,7 +87,7 @@ $result_in->execute();
 
 if($result_in)  // Sikeres INSER utasítás
 {
-        $msg=array('klinika_nev'=>$klinika_nev);
+        $msg=array('klinika_nev'=>$klinika_nev,'error'=>'0');
         echo json_encode($msg);
 }else {
     echo json_encode(array('error'=>'INSER error reg_klinika_php dobja'));

@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+
+}
+:root {
+    --feher: #ffffff;
+    --vilagos_szurke: #F2F2F2;
+    --gomb_szurke:#B9B9B9;
+    --szurke: #707070;
+    --sotet_szurke: #4A4A4A;
+    --pink: #E6426E;
+    --vilagos_pink: #E6426E57;
+
+}
+
+#sess_torzs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+            "szekcio_1 main"
+            "szekcio_2 main"
+} 
+#info_userId{
+    display: none;
+}
+    
+#szekcio_1{
+        box-shadow: 10px 10px 40px #00000017;
+        margin: 20px 50px 20px 40px;
+        background-color: var(--feher);
+        border-radius: 25px;
+        grid-area: szekcio_1;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows: minmax(auto, 150px) 30px 50px 50px minmax(auto,150px) 50px;
+    
+    }
+
+        #k_logo_1 {
+            border: 1px solid;
+            border-radius: 50%;
+            border-color: var(--pink);
+            max-width: 100px;
+            padding: 3px 3px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            align-self: center;
+            justify-self: center;
+        }
+        #klinika_nev_1{
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--pink);
+            grid-column: 2/end;
+            grid-row: 1/2;
+            align-self: center;
+        }
+        #varos_1{
+            grid-column: 2/end;
+            grid-row: 2/3;
+            justify-self: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        #phone_cim_1 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-left: 20px;
+            font-size: 1.2rem;
+        }
+
+        #phone_1 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+            margin-left: 20px;
+            font-size: 1.2rem;
+        }
+        #rolunk_cim_1 {
+            grid-column: 1/end;
+            grid-row: 4/5;
+            margin-left: 20px;
+            justify-self: center;
+        }
+        #rolunk_1 {
+            grid-column: 1/end;
+            grid-row: 5/6;
+            margin-left: 20px
+        }
+        #gomb_klinik {
+            grid-column: 1/2;
+            grid-row: 6/7;
+            height: 30px;
+            align-self: center;
+            justify-self: center;
+        }
+
+#szekcio_2{
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 50px 20px 40px;
+    background-color: var(--feher);
+    border-radius: 25px;
+    display: grid;
+    grid-area: szekcio_2;
+    grid-column: 1/2;
+    grid-row: 2/end;
+}
+#terkep_1{
+    padding: 30px;
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 50px 20px 40px;
+    background-color: var(--feher);
+    border-radius: 25px;
+
+}
+.label_klin{
+    color: var(--pink);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#eredmeny {
+    display: block;
+    grid-area: eredmeny;
+    grid-column: 2/end;
+    grid-row: 3/end;
+}
+ 
+#urlap {
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 50px 20px 40px;
+    background-color: var(--feher);
+    border-radius: 25px;
+    background-color: var(--feher);
+    box-shadow: 10px 10px 40px #00000017;
+    margin: 20px 40px 20px 10px;
+    display: block;
+    grid-area: main;
+    padding: 20px;
+}

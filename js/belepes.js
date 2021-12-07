@@ -65,6 +65,10 @@ location.reload();
         $('#gomb_log').css("display","none");
         $('#gomb_reg_p').css("display","block");
         $('#gomb_reg_a').css("display","block");
+        
+        var newablak="http://visitorcare.eu/admin/view/admin.php";
+        window.open(newablak,"admin");
+
       case "1":
       case "2":
     }

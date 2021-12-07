@@ -1,3 +1,17 @@
+$(document).ready(function () {
+    $("#jel_otthon").click(function(){
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=800,height=700`;
+        var newablak="http://visitorcare.eu/jelentkezes/view/jelent_otthon.php";
+        window.open(newablak,"jelentkez",params);
+    });
+    $("#jel_apolo").click(function(){
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+        width=800,height=700`;        
+        var newablak="http://visitorcare.eu/jelentkezes/view/jelent_apolo.php";
+        window.open(newablak,"jelentkez",params);
+    });
+});
 $("#myModal_regP").focus(function(){
    
     $("#inputPassword2").focusout(function(){

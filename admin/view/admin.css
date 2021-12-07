@@ -1,0 +1,97 @@
+:root{
+    --feher: #ffffff;
+    --vilagos_szurke: #F2F2F2;
+    --gomb_szurke:#B9B9B9;
+    --szurke: #707070;
+    --sotet_szurke: #4A4A4A;
+    --pink: #E6426E;
+    --vilagos_pink: #E6426E57;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+}
+
+h1 {
+    color: var(--sotet_szurke);
+    font-size: 24px;
+}
+
+#wrapper{
+    width: 95%;
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: minmax(1fr,auto);
+    grid-template-areas: 
+        "menu_oldal session";
+    grid-gap: 20px;
+}
+
+#menu_oldal{
+    display: grid;
+    grid-area: menu_oldal;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 50px);
+    grid-gap: 10px;
+    background-color: var(--vilagos_szurke);
+    padding: 50px;
+}
+
+#session{
+    display: grid;
+    grid-area: session;
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 1fr auto;
+    grid-gap: 5px;
+}
+#sess_cim{
+    grid-area: sess_desc;
+    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#sess_desc{
+    grid-area: sess_desc;
+    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+#sess_torzs{
+    grid-area: sess_desc;
+    grid-column: 1/2;
+    grid-row: 3/end;
+}
+footer{
+    grid-column: 1/end;
+    grid-row: 3/end;
+}
+
+.menu{
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+    border-radius: 45px;
+    background-color: var(--pink);
+    box-shadow:  3px 3px 10px var(--szurke);
+    
+}
+.menu p{
+    font-size: 1em;
+}
+.menu:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.aktiv{
+    background-color: var(--vilagos_szurke);
+    color: var(--sotet_szurke);
+    font-weight: 700;
+}

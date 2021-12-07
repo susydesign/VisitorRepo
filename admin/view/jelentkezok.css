@@ -1,0 +1,78 @@
+:root{
+    --feher: #ffffff;
+    --vilagos_szurke: #F2F2F2;
+    --gomb_szurke:#B9B9B9;
+    --szurke: #707070;
+    --sotet_szurke: #4A4A4A;
+    --pink: #E6426E;
+    --vilagos_pink: #E6426E57;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+}
+
+h1 {
+    color: var(--sotet_szurke);
+    font-size: 24px;
+}
+
+
+#sess_torzs{
+    display: grid;
+    grid-template-areas: 
+        "o_status_1 o_id_1 o_nev_1 o_varos_1 o_utca_1 o_telefon_1 o_email_1 o_kapcs_1"
+        "o_status_2 o_id_2 o_nev_2 o_varos_2 o_utca_2 o_telefon_2 o_email_2 o_kapcs_2"
+    ;
+}
+#o_status_1{
+    grid-area: o_status_1;
+}
+#o_id_1{
+    grid-area: o_id_1;
+}
+#o_nev_1{
+    grid-area: o_nev_1;
+}
+#o_varos_1{
+    grid-area: o_varos_1;
+}
+#o_utca_1{
+    grid-area: o_utca_1;
+}
+#o_telefon_1{
+    grid-area: o_telefon_1;
+}
+#o_email_1{
+    grid-area: o_email_1;
+}
+#o_kapcs_1{
+    grid-area: o_email_1;
+}
+#o_status_2{
+    grid-area: o_status_2;
+}
+#o_id_2{
+    grid-area: o_id_2;
+}
+#o_nev_2{
+    grid-area: o_nev_2;
+}
+#o_varos_2{
+    grid-area: o_varos_2;
+}
+#o_utca_2{
+    grid-area: o_utca_2;
+}
+#o_telefon_2{
+    grid-area: o_telefon_2;
+}
+#o_email_2{
+    grid-area: o_email_2;
+}
+#o_kapcs_2{
+    grid-area: o_email_2;
+}

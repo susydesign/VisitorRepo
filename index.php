@@ -55,7 +55,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 d-flex justify-content-center">
-                        <a id="gomb_reg_p" href="../php/uj_klinika.php" class="btn" role=button Style="width:200px">Új Magánklinika</a>
+                        <a id="gomb_reg_p" href="../admin/view/admin.php" class="btn" role=button Style="width:200px">Admin oldal</a>
 <!--                         
                         <button id="gomb_reg_p" class="btn" type="button" data-bs-toggle="modal" data-bs-target="#myModal_regK" style="width: 200px;">Új Magánklinika </button>
 
@@ -216,54 +216,7 @@
             </form>
     </div>
 
- -->    <div id="hogyan" class="container">
-        <div class="row">
-            <div class="col-12 m-5">
-                <h1 style="text-align: center;">Hogyan működik a Visitor Care?</h1>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-3">
-                <div class="card text-center justify-content-center" >
-                    <div class="justify-content-center">
-                        <img class="card-img-top svgimg" src="./images/svg/user.svg">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
-                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam. </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="card text-center">
-                     <div class="justify-content-center">
-                         <img class="card-img-top svgimg" src="./images/svg/calendar.svg">
-                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
-                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam.</div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="card text-center">
-                    <div class="justify-content-center">
-                        <img class="card-img-top svgimg" src="./images/svg/checked.svg">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
-                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam.</div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+ -->  
 
     <div id="klinikaink" class="container-fluid">
         <div class="row justify-content-center">
@@ -400,10 +353,128 @@
 
     </div>
 
+    <div id="valaszdki" class="grid-container">
+        <div class="d1">
+            <h1>Egészségügyi szakellátók, gondozók keresése</h1>
+        </div>
+        <div class="d2">
+            <form>
+                <input id="ker_hol2" class="valaszt" type="text" class="form-control" placeholder="  &#xf3c5;  Hol keresel? Pl.: Budapest...">
+                <input id="ker_mit2" class="valaszt" type="text" class="form-control" placeholder=" &#xf007;  Pl.: Idősek otthona, szakellátó">
+                <input id="ker_ido2" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Válaszd ki az időpontot">
+            </form>
+        </div>
+        <div class="d3">
+            <button id="btn-valaszt2" class="btn" type="button">Keres</button>
+        </div>
+    </div>
 
+    <div class="row justify-content-center" style="margin: 50px 0px 50px 0px;">        
+        <div class="col-sm-12 col-md-2" >
+            <div class="card card-best">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="" src="./images/otthon1.jpg">
+                    </div>
+                    <div id="ertekel" class="col-6 justify-content-end">
+                        <p>Kökörcsínyfalval</p>
+                        <p>Csipkebogyó utca 4</p>
+                        <p>1345 vélemény alapján</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Őszikék Idősek otthona</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur corporis consectet</p>
+                </div>
+                <a href="#" class="col-6 btn m-2">Megnézem</a>
+            </div>
+        </div>
 
+        <div class="col-sm-12 col-md-2" >
+            <div class="card card-best">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="" src="./images/ap1.jpg">
+                    </div>
+                    <div id="ertekel" class="col-6 justify-content-end">
+                        <p>Ápolónő</p>
+                        <p>*****</p>
+                        <p>217 vélemény alapján</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kezes Klára</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur corporis consectet</p>
+                </div>
+                <a href="#" class="col-6 btn m-2">Megnézem</a>
+            </div>
+        </div>
 
+        <div class="col-sm-12 col-md-2" >
+            <div class="card card-best">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="" src="./images/ottho2.jpg">
+                    </div>
+                    <div id="ertekel" class="col-6 justify-content-end">
+                        <p>Boncida</p>
+                        <p>Kárátok utca 7</p>
+                        <p>1025 vélemény alapján</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kárpátok Idősek otthona</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur corporis consectet</p>
+                </div>
+                <a href="#" class="col-6 btn m-2">Megnézem</a>
+            </div>
+        </div>   
+    </div>
 
+    <div id="partnerunk" class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div style="text-align: center;">
+                    <h1 class="p-2" style="color: #E6426E">Legyen a partnerünk!</h1>
+                    <p class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis tenetur ipsam quo consequatur, blanditiis delectus. Omnis sequi et veritatis voluptatibus beatae ipsum molestias, quae ipsam quisquam aliquam rerum ab in.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="jelent" class="container">
+        <div class="row">
+            <div class="col-12 m-6">
+                <h1 style="text-align: center;">Jelentkezzen!</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div id="jel_otthon" class="col-sm-12 col-md-3 jelent">
+                <div class="card text-center justify-content-center" >
+                    <div class="justify-content-center">
+                        <img class="card-img-top svgimg" src="./images/otthon.svg">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Idősek otthona jelentkezés</h5>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam. </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="jel_apolo" class="col-sm-12 col-md-3 jelent">
+                <div class="card text-center">
+                     <div class="justify-content-center">
+                         <img class="card-img-top svgimg" src="./images/nurs.png">
+                     </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ápoló, gondozó jelentkezés</h5>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam.</div>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
 
 
 
@@ -424,7 +495,7 @@
                             <img class="" src="./images/drnosz.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
-                            <p>Onnkológus</p>
+                            <p>Onkológus</p>
                             <p>*****</p>
                             <p>145 vélemény alapján</p>
                        </div>
@@ -443,7 +514,7 @@
                             <img class="rounded-circle" src="./images/drno.jpeg">
                         </div>
                         <div id="ertekel" class="col-6 justify-content-end">
-                            <p>Onnkológus</p>
+                            <p>Onkológus</p>
                             <p>*****</p>
                             <p>145 vélemény alapján</p>
                        </div>
@@ -520,6 +591,56 @@
         </div>
 
     </div>
+
+    <div id="hogyan" class="container">
+        <div class="row">
+            <div class="col-12 m-5">
+                <h1 style="text-align: center;">Hogyan működik a Visitor Care?</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-3">
+                <div class="card text-center justify-content-center" >
+                    <div class="justify-content-center">
+                        <img class="card-img-top svgimg" src="./images/svg/user.svg">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam. </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="card text-center">
+                     <div class="justify-content-center">
+                         <img class="card-img-top svgimg" src="./images/svg/calendar.svg">
+                     </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam.</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="card text-center">
+                    <div class="justify-content-center">
+                        <img class="card-img-top svgimg" src="./images/svg/checked.svg">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Keress magánpraxisokat vagy szakképzett ápolókat!</h5>
+                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam.</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
     <div id="pinks" class="container">
         <div class="row justify-content-center">
@@ -799,16 +920,16 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-
-    <script src="./js/belepes.js"></script>
-    <script src="./js/service.js"></script>
-    <script src="./js/load_klinikak.js"></script>
-
-
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script>
             $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
+
+    
+    <script src="./js/belepes.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/load_klinikak.js"></script>
+
 
 </body>
 </html>
