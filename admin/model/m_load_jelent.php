@@ -4,7 +4,7 @@ require_once('../../model/connect.php');
 
     $parameter=15;    
 
-$sql = "SELECT * FROM jel_otthon";
+$sql = "SELECT * FROM jel_otthon WHERE o_status=0";
 
 $result = $conn->prepare($sql);
 $result->execute();
@@ -33,7 +33,8 @@ if($result)  // Sikeres utasítás
                 'o_email' => $row['o_email'],                       
                 'o_kapcs' => $row['o_kapcs'],                       
                 'o_status' => $row['o_status'],
-                'error' => "",
+                'jel_o_db' => $count,
+                'error' => "0",
                 'index' => $i
             );
 

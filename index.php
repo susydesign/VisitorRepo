@@ -361,7 +361,12 @@
             <form>
                 <input id="ker_hol2" class="valaszt" type="text" class="form-control" placeholder="  &#xf3c5;  Hol keresel? Pl.: Budapest...">
                 <input id="ker_mit2" class="valaszt" type="text" class="form-control" placeholder=" &#xf007;  Pl.: Idősek otthona, szakellátó">
-                <input id="ker_ido2" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Válaszd ki az időpontot">
+                <select id="ker_mod" name="ker_mod" class="valaszt" placeholder=" &#xf017;  Eseti, Ott lakás, Mind kettő"=">
+                    <option value="Eseti">Eseti</option>
+                    <option value="Ott lakás">Ott lakás</option>
+                    <option value="Mind kettő">Mind kettő</option>
+                </select>
+<!--                 <input id="ker_ido2" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Eseti, Ott lakás, Mind kettő"> -->
             </form>
         </div>
         <div class="d3">
@@ -455,7 +460,7 @@
                         <img class="card-img-top svgimg" src="./images/otthon.svg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Idősek otthona jelentkezés</h5>
+                        <h5 class="card-title">Intézményi jelentkezés</h5>
                         <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil architecto sunt eligendi a aspernatur eos numquam. </div>
                     </div>
                 </div>

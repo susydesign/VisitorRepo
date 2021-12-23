@@ -53,7 +53,7 @@
     <div id="wrapper">
         <div id="menu_oldal">
             <p id="menu1" class="menu">Magánklinikák</p>
-            <p id="menu2" class="menu">Idősek otthona</p>
+            <p id="menu2" class="menu">Intézmények</p>
             <p id="menu3" class="menu">Ápolók</p>
             <p id="menu4" class="menu">Hírek</p>
             <p id="menu5" class="menu">Bannerek</p>
@@ -63,46 +63,48 @@
         <div id="session">
             <h1 id="sess_cim">Jelentkezők</h1>
             <p id="sess_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi numquam, temporibus praesentium recusandae porro quas tempora odio, doloribus cupiditate, libero obcaecati beatae dolore consequuntur velit atque magnam nobis esse debitis voluptates! Libero ducimus voluptas vel excepturi eligendi perspiciatis optio ipsam delectus, rem rerum, dicta nesciunt nemo labore quaerat dolorum corrupti officia molestiae dolor fugiat laborum. Perferendis vitae voluptatum ipsam debitis blanditiis ad, excepturi omnis, tenetur, commodi voluptas consequatur? Nulla, esse numquam voluptas doloribus repellendus dolor eaque praesentium, consequuntur architecto inventore doloremque. Harum, exercitationem quasi. Vel consequatur amet, nostrum dolorum, architecto alias dolorem saepe ipsa dignissimos a rerum sint! Numquam, accusantium!</p>
+
+            
             <div id="sess_torzs">
-                <label for="a_nev">Ápoló neve</label>
-                <p id="a_nev"></p>
-    
-                <div id="jel_otthon_1">
-                    <label for="o_status_1">Státusz</label>
-                    <p id="o_status_1"></p>
-                    <label for="o_id_1">ID</label>
-                    <p id="o_id_1"></p>
-                    <label for="o_nev_1">Név</label>
-                    <p id="o_nev_1"></p>
-                    <label for="o_varos_1">Város</label>
-                    <p id="o_varos_1"></p>
-                    <label for="o_utca_1">Utca</label>
-                    <p id="o_utca_1"></p>
-                    <label for="o_telefon_1">Telefon</label>
-                    <p id="o_telefon_1"></p>
-                    <label for="o_email_1">Email</label>
-                    <p id="o_email_1"></p>
-                    <label for="o_kapcs_1">Kapcsolattartó</label>
-                    <p id="o_kapcs_1"></p>
+                <div id="gombok">
+                    <p id="o_db" class="menu">Intézmény jelentkezők</p>
+                    <p id="k_db" class="menu">Ápoló jelentkezők</p>
                 </div>
-                <div id="jel_otthon_2">
-                    <label for="o_status_2">Státusz</label>
-                    <p id="o_status_2"></p>
-                    <label for="o_id_2">ID</label>
-                    <p id="o_id_2"></p>
-                    <label for="o_nev_2">Név</label>
-                    <p id="o_nev_2"></p>
-                    <label for="o_varos_2">Város</label>
-                    <p id="o_varos_2"></p>
-                    <label for="o_utca_2">Utca</label>
-                    <p id="o_utca_2"></p>
-                    <label for="o_telefon_2">Telefon</label>
-                    <p id="o_telefon_2"></p>
-                    <label for="o_email_2">Email</label>
-                    <p id="o_email_2"></p>
-                    <label for="o_kapcs_2">Kapcsolattartó</label>
-                    <p id="o_kapcs_2"></p>
+
+                <div id="showData_div">
+                    <table id="showData" 
+                        class="table table-bordered 
+                                table-condensed table-striped">
+                        <thead>
+                            <tr>
+                            <th>Id</th>
+                            <th>név</th>
+                            <th>irsz</th>
+                            <th>város</th>
+                            <th>utca</th>
+                            <th>telefon</th>
+                            <th>email</th>
+                            <th>kapcsolat tartó</th>
+                            <th>status</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
+
+                <div id="ok_card">
+                    <input id="o_nev" class="form-control"></input>
+                    <p id="o_id"></p>
+                    <input id="o_irsz" class="form-control"></input>
+                    <input id="o_varos" class="form-control"></input>
+                    <input id="o_utca" class="form-control"></input>
+                    <input id="o_telefon" class="form-control"></input>
+                    <input id="o_email" class="form-control"></input>
+                    <input id="o_kapcs" class="form-control"></input>
+                    <p id="o_status"></p>
+                    <p id="btn_rog" class="menu">Aktivál</p>
+                    <p id="btn_del" class="menu">Töröl</p>
+                </div>
+
             </div>
         </div>
     </div>

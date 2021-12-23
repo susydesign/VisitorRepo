@@ -53,11 +53,11 @@
     <div id="wrapper">
         <div id="menu_oldal">
             <p id="menu1" class="menu">Magánklinikák</p>
-            <p id="menu2" class="menu">Idősek otthona</p>
+            <p id="menu2" class="menu">Intézmények</p>
             <p id="menu3" class="menu aktiv">Ápolók</p>
             <p id="menu4" class="menu">Hírek</p>
             <p id="menu5" class="menu">Bannerek</p>
-            <p id="menu7" class="menu">Új jelentkezők></p>
+            <p id="menu7" class="menu">Új jelentkezők</p>
             <p id="menu6" class="menu">Home</p>
         </div>
         <div id="session">
@@ -100,7 +100,7 @@
                         </div>
                         <h3>Végzettségi adatok</h3>
                         <div class="input-group flex-nowrap p-3">
-                            <span class="input-group-text w-25">Megnevezés</span>
+                            <span class="input-group-text w-25">Végzetség</span>
                             <input id="a_v_megnev" name="a_v_megnev" type="text" class="form-control" placeholder="pl: Gyógytornász" aria-label="a_v_megnev" aria-describedby="a_v_megnev">
                         </div>
                         <div class="input-group flex-nowrap p-3">
@@ -116,11 +116,11 @@
                             <input id="a_oradij" name="a_oradij" type="text" class="form-control" placeholder="pl: 8000" aria-label="o_oradij" aria-describedby="o_dij">
                         </div>
                         <div class="input-group flex-nowrap p-3">
-                            <span class="input-group-text w-25">Beminősítés</span>
-                            <input id="a_minosites" name="a_minosites" type="text" class="form-control" placeholder="pl: 3. kategória" aria-label="a_minosites" aria-describedby="a_minosites">
+                            <span class="input-group-text w-25">Ellátás módja</span>
+                            <input id="a_minosites" name="a_minosites" type="text" class="form-control" placeholder="Eseti, Ott lakás, Mindkettő" aria-label="a_minosites" aria-describedby="a_minosites">
                         </div>
     
-                        <button class="menu" type="submit">Rögzít</button>
+                        <button id="btn_apolo" class="menu" type="submit">Rögzít</button>
                     </form>
                 </div>
             </div>
@@ -136,6 +136,7 @@
         $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
     <script src="../process/admin.js"></script>
+    <script src="../process/apolok.js"></script>
 </body>
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->

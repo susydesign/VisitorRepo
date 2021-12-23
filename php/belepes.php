@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../model/connect.php');
 
 
@@ -35,6 +36,11 @@ if($result)  // Sikeres utasítás
         }
 
         if(password_verify($para_pw,$db_jelszo)){
+
+            $_SESSION['nlogin'] = true;
+            $_SESSION['felh_name'] = $db_felh_nev;
+            $_SESSION['felh_id'] = $db_felh_id;
+
             $msg['jelszo']="jó";
         }else{
             $msg=array('error'=>'NEM JÓ A JELSZÓ!');

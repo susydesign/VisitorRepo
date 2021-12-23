@@ -23,56 +23,105 @@ h1 {
 
 #sess_torzs{
     display: grid;
-    grid-template-areas: 
-        "o_status_1 o_id_1 o_nev_1 o_varos_1 o_utca_1 o_telefon_1 o_email_1 o_kapcs_1"
-        "o_status_2 o_id_2 o_nev_2 o_varos_2 o_utca_2 o_telefon_2 o_email_2 o_kapcs_2"
-    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px minmax(auto, 200px) auto;
 }
-#o_status_1{
-    grid-area: o_status_1;
+#gombok{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
 }
-#o_id_1{
-    grid-area: o_id_1;
+        #o_db{
+            grid-column: 1/2;
+            grid-row: 1;
+            justify-self: center;
+        }
+        #k_db{
+            grid-column: 2/3;
+            grid-row: 1;
+            justify-self: center;
+        }
+    
+#showData_div{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    overflow-y:scroll;
 }
-#o_nev_1{
-    grid-area: o_nev_1;
+
+#ok_card{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: 25px;
+    justify-self: center;
+    border-radius: 25px;
+    display: none;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 60px 30px repeat(4,40px);
+    box-shadow: 7px 7px 20px #f0f0f3;
+    padding: 20px;
+    grid-gap: 20px;
 }
-#o_varos_1{
-    grid-area: o_varos_1;
-}
-#o_utca_1{
-    grid-area: o_utca_1;
-}
-#o_telefon_1{
-    grid-area: o_telefon_1;
-}
-#o_email_1{
-    grid-area: o_email_1;
-}
-#o_kapcs_1{
-    grid-area: o_email_1;
-}
-#o_status_2{
-    grid-area: o_status_2;
-}
-#o_id_2{
-    grid-area: o_id_2;
-}
-#o_nev_2{
-    grid-area: o_nev_2;
-}
-#o_varos_2{
-    grid-area: o_varos_2;
-}
-#o_utca_2{
-    grid-area: o_utca_2;
-}
-#o_telefon_2{
-    grid-area: o_telefon_2;
-}
-#o_email_2{
-    grid-area: o_email_2;
-}
-#o_kapcs_2{
-    grid-area: o_email_2;
+        #o_nev{
+            grid-column: 1/4;
+            grid-row: 1/2;
+            justify-self: center;
+            text-align: center;
+            font-size: 1.5rem;        
+        }
+        #o_id{
+            grid-column: 1/4;
+            grid-row: 2/3;
+            justify-self: center;
+        }
+        #o_irsz{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        #o_varos{
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
+        #o_utca{
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+        #o_telefon{
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }
+        #o_email{
+            grid-column: 2/3;
+            grid-row: 4/5;
+        }
+        #o_kapcs{
+            grid-column: 3/4;
+            grid-row: 4/5;
+        }
+        #o_status{
+            grid-column: 1/4;
+            grid-row: 5/6;
+            justify-self: center;
+            text-align: center;
+            color: var(--pink);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        #btn_rog{
+            grid-column: 1/2;
+            grid-row: 6/7;
+            align-self: center;
+        }
+        #btn_del{
+            grid-column: 3/4;
+            grid-row: 6/7;
+            align-self: center;
+        }
+
+.form-control {
+    border-radius: 45px;
+    color: var(--fekete);
+    box-shadow: -7px -7px 20px #f0f0f3;
 }

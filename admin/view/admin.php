@@ -24,6 +24,15 @@
 
 </head>
 <body>
+    <?php 
+        session_start();
+        if( !$_SESSION['nlogin']){
+            echo "be kell lépni!";
+
+        }else{
+            echo $_SESSION['felh_name'];
+        }
+    ?>
     <div id="header_vc" class="container-fluid">
        <div id="header_1sor" class="row align-items-center">
             <div class="col-1 col-md-1 d-none d-md-block"></div>
@@ -50,12 +59,12 @@
     </div>
     <div id="wrapper">
         <div id="menu_oldal">
-            <p id="menu1" class="menu">Magánklinikák</p>
-            <p id="menu2" class="menu">Idősek otthona</p>
-            <p id="menu3" class="menu">Ápolók</p>
-            <p id="menu4" class="menu">Hírek</p>
-            <p id="menu5" class="menu">Bannerek</p>
-            <p id="menu7" class="menu">Új jelentkezők</p>
+            <p id="menu1" class="menu"><a href="klinika.php">Magánklinikák</a></p>
+            <p id="menu2" class="menu"><a href="otthon.php">Intézmények</a></p>
+            <p id="menu3" class="menu"><a href="apolo.php">Ápolók</a></p>
+            <p id="menu4" class="menu"><a href="hirek.php">Hírek</a></p>
+            <p id="menu5" class="menu"><a href="banner.php">Bannerek</a></p>
+            <p id="menu7" class="menu"><a href="jelentkezok.php">Új jelentkezők</a></p>
         </div>
         <div id="session">
             <h1 id="sess_cim">Adminisztrációs oldal</h1>

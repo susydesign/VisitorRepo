@@ -52,22 +52,22 @@
     <div id="wrapper">
         <div id="menu_oldal">
             <p id="menu1" class="menu">Magánklinikák</p>
-            <p id="menu2" class="menu aktiv">Idősek otthona</p>
+            <p id="menu2" class="menu aktiv">Intézmények</p>
             <p id="menu3" class="menu">Ápolók</p>
             <p id="menu4" class="menu">Hírek</p>
             <p id="menu5" class="menu">Bannerek</p>
-            <p id="menu7" class="menu">Új jelentkezők></p>
+            <p id="menu7" class="menu">Új jelentkezők</p>
             <p id="menu6" class="menu">Home</p>
         </div>
         <div id="session">
-            <h1 id="sess_cim">Idősek otthona</h1>
+            <h1 id="sess_cim">Intézmények</h1>
             <p id="sess_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati perferendis qui vero, officiis sapiente laboriosam, commodi temporibus provident animi nulla omnis eius aperiam? Maxime facilis officia accusantium quas voluptas officiis laboriosam asperiores ea. Ipsa in minima impedit ut nostrum obcaecati quam et autem illo aut voluptatum dignissimos iure repudiandae, eveniet maxime, deleniti necessitatibus quia eius asperiores labore ullam consectetur quasi similique. Blanditiis voluptas repellendus fuga eaque mollitia, neque sapiente commodi iure numquam provident sit recusandae? Exercitationem voluptatum, rem laborum nobis delectus sapiente cumque assumenda, doloribus optio debitis pariatur architecto quas eligendi ullam minima voluptatem excepturi itaque porro inventore maiores magnam?</p>
             <div id="sess_torzs">
                 <div id=urlap>
                     <form>
                         <div class="input-group flex-nowrap p-3">
-                            <span class="input-group-text w-25" id="o_nev">Otthon neve</span>
-                            <input type="text" class="form-control" placeholder="Idősek otthonának a neve" aria-label="o_nev" aria-describedby="o_nev">
+                            <span class="input-group-text w-25" id="o_nev">Intézmény neve</span>
+                            <input type="text" class="form-control" placeholder="Intézménynek a neve" aria-label="o_nev" aria-describedby="o_nev">
                         </div>
                         <div class="input-group flex-nowrap p-3">
                             <span class="input-group-text w-25" id="o_irsz">Irányítószám</span>

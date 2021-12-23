@@ -27,13 +27,13 @@
     <div id=jo_wapper>
         <img src="../../images/svg/Visitor-Care-logo.svg">
         <h1 id="urlap_cim">Jelentkezési ürlap</h1>
-        <h3 id="urlap_alcim">Idősek otthona</h3>
+        <h3 id="urlap_alcim">Intézmény</h3>
         <p id="urlap_leíras">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam deleniti sequi, fugit culpa, vitae cum voluptas, aut optio amet et blanditiis fugiat at illo eos incidunt suscipit laudantium ducimus nam. Fugiat, id, totam aut qui libero sapiente, veniam dolores laboriosam perferendis quod amet hic impedit magni reprehenderit consequatur optio perspiciatis?</p>
             <div id=urlap>
                 <form>
                     <div class="input-group flex-nowrap p-3">
-                        <span class="input-group-text w-25">Otthon neve</span>
-                        <input id="o_nev" name="o_nev" type="text" class="form-control" placeholder="Idősek otthonának a neve" aria-label="o_nev" aria-describedby="o_nev">
+                        <span class="input-group-text w-25">Intézmény neve</span>
+                        <input id="o_nev" name="o_nev" type="text" class="form-control" placeholder="Intézmény a neve" aria-label="o_nev" aria-describedby="o_nev">
                     </div>
                     <div class="input-group flex-nowrap p-3">
                         <span class="input-group-text w-25">Irányítószám</span>

@@ -20,8 +20,7 @@
     
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="admin.css">
-    <link rel="stylesheet" type="text/css" href="prof_klinika.css">
+    <link rel="stylesheet" type="text/css" href="klinika.css">
 
 
 </head>
@@ -50,11 +49,10 @@
             <div class="col-1 col-md-1 d-none d-md-block"></div>
         </div>
     </div>
-
     <div id="wrapper">
         <div id="menu_oldal">
             <p id="menu1" class="menu aktiv">Magánklinikák</p>
-            <p id="menu2" class="menu">Idősek Otthona</p>
+            <p id="menu2" class="menu">Intézmények</p>
             <p id="menu3" class="menu">Ápolók</p>
             <p id="menu4" class="menu">Hírek</p>
             <p id="menu5" class="menu">Bannerek</p>
@@ -62,162 +60,65 @@
             <p id="menu6" class="menu">Home</p>
         </div>
         <div id="session">
-            <h1 id="sess_cim">Magánklinikák oldal</h1>
-            <p id="info_userId">15</p>
-            <p id="sess_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos unde, dolorem omnis mollitia recusandae earum iusto delectus obcaecati et facere sapiente vitae, error placeat eaque reiciendis. Eligendi aliquam at totam doloribus ipsum dignissimos voluptatibus error ratione temporibus molestiae natus debitis ducimus dolorem iusto est cupiditate alias perferendis, sapiente praesentium.</p>
+            <h1 id="sess_cim">Magánklinika</h1>
+            <p id="sess_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati perferendis qui vero, officiis sapiente laboriosam, commodi temporibus provident animi nulla omnis eius aperiam? Maxime facilis officia accusantium quas voluptas officiis laboriosam asperiores ea. Ipsa in minima impedit ut nostrum obcaecati quam et autem illo aut voluptatum dignissimos iure repudiandae, eveniet maxime, deleniti necessitatibus quia eius asperiores labore ullam consectetur quasi similique. Blanditiis voluptas repellendus fuga eaque mollitia, neque sapiente commodi iure numquam provident sit recusandae? Exercitationem voluptatum, rem laborum nobis delectus sapiente cumque assumenda, doloribus optio debitis pariatur architecto quas eligendi ullam minima voluptatem excepturi itaque porro inventore maiores magnam?</p>
             <div id="sess_torzs">
-                <div id="szekcio_1">
-                    <img id="k_logo_1" class="" src="">
-                    <h5 id="klinika_nev_1"class="card-title"></h5>
-                    <p id="varos_1"></p>
-                    <p id="phone_cim_1" class="label_klin">Telefonszámok:</p>
-                    <p id="phone_1"></p>
-                    <p id="rolunk_cim_1" class="label_klin">Klinika leírása</p>
-                    <p id="rolunk_1" class="card-text"></p>
-                    <a id="gomb_klinik" href="#" class="col-6 btn m-2">Módosítás</a>
-                </div>
-                <div id="szekczio_2">
-                    <div id="terkep_1"></div>
-                </div>
-                <div id="urlap">
+                <div id=urlap>
                     <form>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="szak_id">Szakrendelés</label>
-                            </div>
-                            <select class="custom-select" id="szak_id">
-                                <option selected>Vállaszzon szakrendelőt...</option>
-                                <option value="1">Sürgősségi ellátás/Acut ellátás</option>
-                                <option value="2">Diagnosztika</option>
-                                <option value="3">Belgyógyászati ellátás</option>
-                                <option value="4">Baleseti sebészet/Traumatológia</option>
-                                <option value="5">Hasi sebészeti ellátás</option>
-                                <option value="6">Érsebészet</option>
-                                <option value="7">Szülészet</option>
-                                <option value="8">Nőgyógyászat</option>
-                                <option value="9">Urológia</option>
-                                <option value="10">Plasztikai sebészet</option>
-                                <option value="11">Fül-orr-gégészet</option>
-                                <option value="12">Szemészet</option>
-                                <option value="13">Pszichés támogatás</option>
-                            </select>
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Klinika neve</span>
+                            <input id="klinika_nev" type="text" class="form-control" placeholder="Pl.: Szent Rókus Egészszégügyi Klinika" aria-label="klinika_nev" aria-describedby="klinika_nev">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day1">Hétfő</span>
-                            </div>
-                            <input id="day1_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day1_zar"type="text" class="form-control" placeholder="00:00" value="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Irányítószám</span>
+                            <input id="k_address_irsz" type="text" class="form-control" placeholder="pl: 9876" aria-label="k_address_irsz" aria-describedby="k_address_irsz">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day2">Kedd</span>
-                            </div>
-                            <input id="day2_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day2_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Város</span>
+                            <input id="k_address_varos" type="text" class="form-control" placeholder="pl: Szombathely" aria-label="k_address_varos" aria-describedby="k_address_varos">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day3">Szerda</span>
-                            </div>
-                            <input id="day3_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day3_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Utca</span>
+                            <input id="k_address_utca" type="text" class="form-control" placeholder="pl.: Ady Endre utca" aria-label="k_address_utca" aria-describedby="k_address_utca">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day4">Csütörtök</span>
-                            </div>
-                            <input id="day4_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day4_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Házszám</span>
+                            <input id="k_address_hsz" type="text" class="form-control" placeholder="pl.: 10" aria-label="k_address_hsz" aria-describedby="k_address_hsz">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day5">Péntek</span>
-                            </div>
-                            <input id="day5_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day5_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Telefonszám</span>
+                            <input id="k_phone" type="text" class="form-control" placeholder="pl.: +36 (1) 1234567" aria-label="k_phone" aria-describedby="k_phone">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day6">Szombat</span>
-                            </div>
-                            <input id="day6_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day6_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Mobil</span>
+                            <input id="k_mobil" type="text" class="form-control" placeholder="pl.: +36 (30) 1234567" aria-label="k_mobil" aria-describedby="k_mobil">
                         </div>
-                        <div class="input-group">
-                            <div class="input-group-prepend" style="width: 100px;">
-                                <span class="input-group-text" id="day7">Vasárnap</span>
-                            </div>
-                            <input id="day7_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
-                            <input id="day7_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">E-mail cím</span>
+                            <input id="k_email" type="text" class="form-control" placeholder="pl.: info@rokusklinik.hu" aria-label="k_email" aria-describedby="k_email">
                         </div>
-    
-
-                        <div class="input-group mb-3 p-3">
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="nonstop">
-                                <label class="form-check-label" for="nonstop">24 órás</label>
-                            </div>
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="felnot">
-                                <label class="form-check-label" for="felnot">Felnőt rendelés</label>
-                            </div>
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="gyermek">
-                                <label class="form-check-label" for="gyermek>Gyermek">Gyermek rendelés</label>
-                            </div>
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="szemelyes">
-                                <label class="form-check-label" for="szemelyes">Személyes</label>
-                            </div>
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="online">
-                                <label class="form-check-label" for="online">On-Line rendelés</label>
-                            </div>
-                            <div class="form-check p-3">
-                                <input type="checkbox" class="form-check-input" id="gondozas">
-                                <label class="form-check-label" for="gondozas">Utógondozás</label>
-                            </div>
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Weboldal címe</span>
+                            <input id="k_web" type="text" class="form-control" placeholder="pl.: www.rokusklinik.hu" aria-label="k_web" aria-describedby="k_web">
                         </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" style="width: 200px;">Telefon szám</span>
-                            </div>
-                            <input type="text" class="form-control" id="r_telefon" aria-label="phone mumber" placeholder="+36 30 1234567">
-                            <div class="input-group-append">
-                                <span class="input-group-text"><i class="fas fa-phone-square-alt"></i></span>
-                            </div>
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Intézmény logója</span>
+                            <input id="k_logo" type="text" class="form-control" placeholder="pl.: rokuslogo.jpg" aria-label="k_logo" aria-describedby="k_logo">
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" style="width: 200px;">Szolgáltatás ára</span>
-                            </div>
-                            <input type="text" class="form-control" id="ar" aria-label="Amount (to the nearest Ft)">
-                            <div class="input-group-append">
-                                <span class="input-group-text">Ft/óra</span>
-                            </div>
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Rólunk</span>
+                            <input id="k_rolunk" type="text" class="form-control" placeholder="Intézmény pársoros ismertetése" aria-label="k_rolunk" aria-describedby="k_rolunk">
                         </div>
-
-                        <div>
-                        <a id="gomb_szak" href="#" class="col-6 btn m-2">Rögzít</a>
+                        <div class="input-group flex-nowrap p-3">
+                            <span class="input-group-text w-25">Intézmény geokoordinátája</span>
+                            <input id="geoframe" type="text" class="form-control" placeholder="Google maps frame import" aria-label="geoframe" aria-describedby="geoframe">
                         </div>
-                    </form >
-                    <div id="eredmeny" class="contaniner">
-                        <div class="row">
-                            <div class="md-6">
-                                <div id="op_rendnev"></div>
-                            </div>
-                            <div class="md-6">
-                                <div id="op_rendphone"></div>
-                            </div>
-                        </div>
-                    </div>
+                        <button id="btn_bekuld" class="menu" type="submit">Rögzít</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Scriptek -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
     crossorigin="anonymous"></script>
@@ -228,8 +129,7 @@
         $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
     <script src="../process/admin.js"></script>
-    <script src="../process/load_klinika.js"></script>
-
+    <script src="../process/klinika_cr.js"></script>
 </body>
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->

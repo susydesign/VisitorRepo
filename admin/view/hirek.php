@@ -52,11 +52,11 @@
     <div id="wrapper">
         <div id="menu_oldal">
             <p id="menu1" class="menu">Magánklinikák</p>
-            <p id="menu2" class="menu">Idősek otthona</p>
+            <p id="menu2" class="menu">Intézmények</p>
             <p id="menu3" class="menu">Ápolók</p>
             <p id="menu4" class="menu aktiv">Hírek</p>
             <p id="menu5" class="menu">Bannerek</p>
-            <p id="menu7" class="menu">Új jelentkezők></p>
+            <p id="menu7" class="menu">Új jelentkezők</p>
             <p id="menu6" class="menu">Home</p>           
         </div>
         <div id="session">
