@@ -2,8 +2,6 @@
 /* load_klinika.js hívja a prof_klinika.php betöltésekor*/
 require_once('../../model/connect.php');
 
-    $parameter=15;    
-
 $sql = "SELECT * FROM jel_otthon WHERE o_status=0";
 
 $result = $conn->prepare($sql);

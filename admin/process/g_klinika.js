@@ -22,18 +22,18 @@ $(document).ready(function () {
 
           
         $('#o_id').html(akt_k_id)
-        $('#klinika_nev').val(akt_k_nev);
+        $('#klinika_nev_1').html(akt_k_nev);
         $('#k_address_irsz').val(akt_k_irsz);
         $('#k_address_varos').val(akt_k_varos);
         $('#k_address_utca').val(akt_k_utca);
         $('#k_address_hsz').val(akt_k_hsz);
-        $('#k_phone').val(akt_k_phone);
+        $('#phone_1').html(akt_k_phone);
         $('#k_mobil').val(akt_k_mobil);
         $('#k_email').val(akt_k_email);
         $('#k_web').val(akt_k_web);
-        $('#k_logo').val(akt_k_logo);
-        $('#k_rolunk').val(akt_k_rolunk);
-        $('#geoframe').html(akt_k_geoframe);
+        $('#k_logo_1').html(akt_k_logo);
+        $('#rolunk_1').html(akt_k_rolunk);
+        $('#terkep_1').html(akt_k_geoframe);
     });
 
     load_klinikak();
@@ -95,11 +95,11 @@ $(document).ready(function () {
                 "<td>" + product.k_address_hsz + "</td>" +
                 "<td>" + product.k_phone + "</td>" +
                 "<td>" + product.k_mobil + "</td>" +
-                "<td>" + product.k_email + "</td>" +
+/*                 "<td>" + product.k_email + "</td>" + */
                 "<td>" + product.k_web + "</td>" +
                 "<td>" + product.k_logo + "</td>" +
                 "<td>" + product.k_rolunk + "</td>" +
-                "<td>" + product.geoframe + "</td>" +
+/*                 "<td>" + product.geoframe + "</td>" + */
               "</tr>";
             return ret;
           }

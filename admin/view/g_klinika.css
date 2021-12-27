@@ -20,23 +20,28 @@
 #sess_torzs{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-            "szekcio_1 main"
-            "szekcio_2 main"
+    grid-template-rows: minmax(auto,150px) 1fr 1fr 1fr;
 } 
 #info_userId{
     display: none;
 }
-    
+ 
+#showData_div{
+    max-width: 1000px;
+    grid-column: 1/end;
+    grid-row: 1/2;
+    justify-self: center;
+    overflow-y:scroll;
+}
+
+
 #szekcio_1{
         box-shadow: 10px 10px 40px #00000017;
         margin: 20px 50px 20px 40px;
         background-color: var(--feher);
         border-radius: 25px;
-        grid-area: szekcio_1;
         grid-column: 1/2;
-        grid-row: 1/2;
+        grid-row: 2/3;
         display: grid;
         grid-template-columns: repeat(2, minmax(200px, 1fr));
         grid-template-rows: minmax(auto, 150px) 30px 50px 50px minmax(auto,150px) 50px;
@@ -102,14 +107,13 @@
         }
 
 #szekcio_2{
+    grid-column: 1/2;
+    grid-row: 4/3;
     box-shadow: 10px 10px 40px #00000017;
     margin: 20px 50px 20px 40px;
     background-color: var(--feher);
     border-radius: 25px;
     display: grid;
-    grid-area: szekcio_2;
-    grid-column: 1/2;
-    grid-row: 2/end;
 }
 #terkep_1{
     padding: 30px;
@@ -127,12 +131,13 @@
 
 #eredmeny {
     display: block;
-    grid-area: eredmeny;
     grid-column: 2/end;
-    grid-row: 3/end;
+    grid-row: 4/end;
 }
  
 #urlap {
+    grid-column: 2/3;
+    grid-row: 2/3;
     box-shadow: 10px 10px 40px #00000017;
     margin: 20px 50px 20px 40px;
     background-color: var(--feher);
@@ -141,6 +146,5 @@
     box-shadow: 10px 10px 40px #00000017;
     margin: 20px 40px 20px 10px;
     display: block;
-    grid-area: main;
     padding: 20px;
 }

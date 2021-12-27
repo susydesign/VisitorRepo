@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" type="text/css" href="admin.css">
-    <link rel="stylesheet" type="text/css" href="prof_klinika.css">
+    <link rel="stylesheet" type="text/css" href="g_klinika.css">
 
 
 </head>
@@ -63,12 +63,34 @@
         </div>
         <div id="session">
             <h1 id="sess_cim">Magánklinikák oldal</h1>
-            <p id="info_userId">15</p>
+            <p id="info_userId"></p>
             <p id="sess_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos unde, dolorem omnis mollitia recusandae earum iusto delectus obcaecati et facere sapiente vitae, error placeat eaque reiciendis. Eligendi aliquam at totam doloribus ipsum dignissimos voluptatibus error ratione temporibus molestiae natus debitis ducimus dolorem iusto est cupiditate alias perferendis, sapiente praesentium.</p>
             <div id="sess_torzs">
+                <div id="showData_div">
+                    <table id="showData" 
+                        class="table table-bordered 
+                                table-condensed table-striped">
+                        <thead>
+                            <tr>
+                            <th>Id</th>
+                            <th>Klinika neve</th>
+                            <th>Irsz</th>
+                            <th>Város</th>
+                            <th>Utca</th>
+                            <th>Hsz</th>
+                            <th>Telefon</th>
+                            <th>Mobil</th>
+                            <th>E-mail</th>
+                            <th>Weboldal</th>
+                            <th>Logo</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
                 <div id="szekcio_1">
                     <img id="k_logo_1" class="" src="">
-                    <h5 id="klinika_nev_1"class="card-title"></h5>
+                    <h5 id="klinika_nev_1" class="card-title"></h5>
                     <p id="varos_1"></p>
                     <p id="phone_cim_1" class="label_klin">Telefonszámok:</p>
                     <p id="phone_1"></p>
@@ -76,7 +98,7 @@
                     <p id="rolunk_1" class="card-text"></p>
                     <a id="gomb_klinik" href="#" class="col-6 btn m-2">Módosítás</a>
                 </div>
-                <div id="szekczio_2">
+                <div id="szekcio_2">
                     <div id="terkep_1"></div>
                 </div>
                 <div id="urlap">
@@ -228,7 +250,7 @@
         $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
     <script src="../process/admin.js"></script>
-    <script src="../process/load_klinika.js"></script>
+    <script src="../process/g_klinika.js"></script>
 
 </body>
 <footer class="text-center text-lg-start bg-dark text-muted">

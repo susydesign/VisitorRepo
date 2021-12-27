@@ -46,27 +46,34 @@ h1 {
     grid-area: session;
     width: 95%;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 150px 1fr auto;
+    grid-template-rows: 100px 90px minmax(auto, 200px) 1fr auto;
     grid-gap: 5px;
 }
 #sess_cim{
-    grid-area: sess_desc;
     justify-self: center;
     grid-column: 1/2;
     grid-row: 1/2;
 }
 #sess_desc{
-    grid-area: sess_desc;
     justify-self: center;
     grid-column: 1/2;
     grid-row: 2/3;
 
 }
+#showData_div{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+    overflow-y:scroll;
+}
+
 #sess_torzs{
     grid-area: sess_desc;
     grid-column: 1/2;
-    grid-row: 3/end;
+    grid-row: 4/end;
 }
+
+
 footer{
     grid-column: 1/end;
     grid-row: 3/end;

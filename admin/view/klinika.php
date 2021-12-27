@@ -63,6 +63,28 @@
             <h1 id="sess_cim">Magánklinika</h1>
             <p id="sess_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati perferendis qui vero, officiis sapiente laboriosam, commodi temporibus provident animi nulla omnis eius aperiam? Maxime facilis officia accusantium quas voluptas officiis laboriosam asperiores ea. Ipsa in minima impedit ut nostrum obcaecati quam et autem illo aut voluptatum dignissimos iure repudiandae, eveniet maxime, deleniti necessitatibus quia eius asperiores labore ullam consectetur quasi similique. Blanditiis voluptas repellendus fuga eaque mollitia, neque sapiente commodi iure numquam provident sit recusandae? Exercitationem voluptatum, rem laborum nobis delectus sapiente cumque assumenda, doloribus optio debitis pariatur architecto quas eligendi ullam minima voluptatem excepturi itaque porro inventore maiores magnam?</p>
             <div id="sess_torzs">
+                <div id="showData_div">
+                    <table id="showData" 
+                        class="table table-bordered 
+                                table-condensed table-striped">
+                        <thead>
+                            <tr>
+                            <th>Id</th>
+                            <th>Klinika neve</th>
+                            <th>Irsz</th>
+                            <th>Város</th>
+                            <th>Utca</th>
+                            <th>Hsz</th>
+                            <th>Telefon</th>
+                            <th>Mobil</th>
+                            <th>E-mail</th>
+                            <th>Weboldal</th>
+                            <th>Logo</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
                 <div id=urlap>
                     <form>
                         <div class="input-group flex-nowrap p-3">
