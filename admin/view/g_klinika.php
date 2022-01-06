@@ -83,21 +83,34 @@
                             <th>E-mail</th>
                             <th>Weboldal</th>
                             <th>Logo</th>
+                            <th>Rólunk</th>
+                            <th>Térkép</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
 
-                <div id="szekcio_1">
-                    <img id="k_logo_1" class="" src="">
-                    <h5 id="klinika_nev_1" class="card-title"></h5>
-                    <p id="varos_1"></p>
-                    <p id="phone_cim_1" class="label_klin">Telefonszámok:</p>
-                    <p id="phone_1"></p>
-                    <p id="rolunk_cim_1" class="label_klin">Klinika leírása</p>
-                    <p id="rolunk_1" class="card-text"></p>
-                    <a id="gomb_klinik" href="#" class="col-6 btn m-2">Módosítás</a>
-                </div>
+                <form id="szekcio_1">
+                    <p id="klinika_id" class="hide"></p>
+                    <img id="k_logo_kep" class="" src="">
+                    <input type="text" name="k_logo" id="k_logo" placeholder="logo fájl neve">
+                    <input type="text" name="klinika_nev" id="klinika_nev" placeholder="A klinika neve">
+                    <input type="text" name id="k_address_varos" placeholder="Település neve"></input>
+                    <input type="text" name id="k_address_irsz" placeholder="Irányítószám"></input>
+                    <input type="text" name id="k_address_utca" placeholder="Utca neve"></input>
+                    <input type="text" name id="k_address_hsz" placeholder="Házszám"></input>
+                    <p id="k_elerhetoseg_cim" class="label_klin">Elérhetőségek:</p>
+                    <input id="k_phone" placeholder="vezetékes szám" placeholder="Vonalas telefon"></input>
+                    <input id="k_mobil" placeholder="mobil szám"></input>
+                    <input id="k_email" placeholder="E-mail"></input>
+                    <input id="k_web" placeholder="pl.: www.klinika.hu"></input>
+                    <p id="rolunk_cim" class="label_klin">Klinika leírása</p>
+                    <input id="k_rolunk" class="card-text" placeholder="Klinika rövid ismertetése"></input>
+                    <p id="geoframe_cim" class="label_klin">Geoframe adat</p>
+                    <input id="geoframe" class="card-text" placeholder="google térkép megosztás frame-je"></input>
+                    <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
+                    <a id="gomb_c" href="#" class="col-6 btn m-2">Új Klinika</a>
+                </form>
                 <div id="szekcio_2">
                     <div id="terkep_1"></div>
                 </div>
@@ -108,7 +121,7 @@
                                 <label class="input-group-text" for="szak_id">Szakrendelés</label>
                             </div>
                             <select class="custom-select" id="szak_id">
-                                <option selected>Vállaszzon szakrendelőt...</option>
+                                <option value="0" selected>Válasszon szakrendelőt...</option>
                                 <option value="1">Sürgősségi ellátás/Acut ellátás</option>
                                 <option value="2">Diagnosztika</option>
                                 <option value="3">Belgyógyászati ellátás</option>
@@ -123,6 +136,7 @@
                                 <option value="12">Szemészet</option>
                                 <option value="13">Pszichés támogatás</option>
                             </select>
+                            <p id="rendelo_id" class="hide">RI</p>
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend" style="width: 100px;">
@@ -182,7 +196,7 @@
                             </div>
                             <div class="form-check p-3">
                                 <input type="checkbox" class="form-check-input" id="felnot">
-                                <label class="form-check-label" for="felnot">Felnőt rendelés</label>
+                                <label class="form-check-label" for="felnot">Felnőtt rendelés</label>
                             </div>
                             <div class="form-check p-3">
                                 <input type="checkbox" class="form-check-input" id="gyermek">
@@ -194,7 +208,7 @@
                             </div>
                             <div class="form-check p-3">
                                 <input type="checkbox" class="form-check-input" id="online">
-                                <label class="form-check-label" for="online">On-Line rendelés</label>
+                                <label class="form-check-label" for="online">On-line rendelés</label>
                             </div>
                             <div class="form-check p-3">
                                 <input type="checkbox" class="form-check-input" id="gondozas">

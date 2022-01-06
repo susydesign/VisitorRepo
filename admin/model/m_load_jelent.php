@@ -46,12 +46,12 @@ if($result)  // Sikeres utasítás
 
         
     }else{ //nincs ilyen felhasználó      
-        $$otthonok=array('error'=>'Nincs még Otthon jelentkező');
+        $otthonok=array('error'=>'Nincs még Otthon jelentkező');
     }
 
 
 }else {
-    echo json_encode(array('error'=>'0-result'));
+    echo json_encode(array('error'=>'1-result'));
 }
 
 

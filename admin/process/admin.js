@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#menu1").click(function(){
-        var newablak="http://visitorcare.eu/admin/view/klinika.php";
+        var newablak="http://visitorcare.eu/admin/view/g_klinika.php";
         window.open(newablak,"admin");
     })
     $("#menu2").click(function(){

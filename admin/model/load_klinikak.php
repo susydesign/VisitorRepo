@@ -33,8 +33,8 @@ if($result)  // Sikeres utasítás
                 'k_mobil' => $row['k_mobil'],                       
                 'k_email' => $row['k_email'],
                 'k_web' => $row['k_web'],
-                'k_email' => $row['k_logo'],
-                'k_email' => $row['k_rolunk'],
+                'k_logo' => $row['k_logo'],
+                'k_rolunk' => $row['k_rolunk'],
                 'geoframe' => $row['geoframe'],
                 'error' => "0",
                 'index' => $i

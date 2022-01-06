@@ -166,9 +166,9 @@
                 <input id="ker_mit" class="valaszt" type="text" class="form-control" placeholder=" &#xf007;  Mit keresel? Pl.: Szemészet...">
                 <select id="ker_mod" class="valaszt" type="text" class="form-select" >
                     <option selected>&#xf500;  Ellátás módja</option>
-                    <option>Fenőt</option>
+                    <option>Felnőtt</option>
                     <option>Gyermek</option>
-                    <option>Online</option>
+                    <option>On-line</option>
                     <option>24 órás</option>
                 </select>
                 <input id="ker_ido" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Válaszd ki az időpontot">
@@ -178,45 +178,6 @@
             <button id="btn-valaszt" class="btn" type="button">Keres</button>
         </div>
     </div>
-
-
-<!--     
-    <div id="valaszdki" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 justify-content-md-center">
-                <h1>Magánklinika keresése</h1>
-            </div>           
-        </div>
-
-       <div class="row justify-content-md-center p-3">
-           <form>
-                <div class="col-3">
-                    <input id="ker_hol" class="form-control valaszt" placeholder="Hol keresel? Pl.: Budapest...">
-                </div>
-                <div class="col-3">
-                    <input id="ker_mit" class="form-control valaszt" placeholder="Mit keresel? Pl.: Szemészet...">
-                </div>
-                <div class="col-3"></div>
-                    <select id="ker_mod" class="form-select valaszt" aria-label="Default select example">
-                        <option selected>Ellátás módja</option>
-                        <option>Fenőt</option>
-                        <option>Gyermek</option>
-                        <option>Online</option>
-                        <option>24 órás</option>
-                    </select>
-                </div>
-                <div class="col-3"></div>
-                    <input id="ker_ido" class="form-control valaszt" placeholder="Válaszd ki az időpontot">
-                </div>
-                <div class="row">
-                    <div class=col-md-auto>
-                        <button id="btn-valaszt" class="btn btn-primary" type="button" >Keres</button>
-                    </div>
-                </div>
-            </form>
-    </div>
-
- -->  
 
     <div id="klinikaink" class="container-fluid">
         <div class="row justify-content-center">
@@ -247,7 +208,6 @@
                     </div>
                     <div id="gombok">
                         <a href="#" class="col-6 btn m-2">Megnézem</a>                   
-                        <a id="gomb_karb_1" class="col-6"><i class="g_karb fas fa-wrench"></i></a>
                     </div>
                 </div>
             </div>
@@ -271,7 +231,6 @@
                     <div id="gombok">
                         <?php ?>
                         <a href="#" class="col-6 btn m-2">Megnézem</a>
-                        <a id="gomb_karb_2"><i class="g_karb fas fa-wrench"></i></a>
                     </div>
                 </div>
 
@@ -295,7 +254,6 @@
                     </div>
                     <div id="gombok">
                         <a href="#" class="col-6 btn m-2">Megnézem</a>
-                        <a id="gomb_karb_3"><i class="g_karb fas fa-wrench"></i></a>
                     </div>
                 </div>
 
@@ -319,7 +277,6 @@
                     </div>
                     <div id="gombok">
                         <a href="#" class="col-6 btn m-2">Megnézem</a>
-                        <a id="gomb_karb_4"><i class="g_karb fas fa-wrench"></i></a>
                     </div>
                 </div>
 
@@ -343,7 +300,6 @@
                     </div>
                     <div id="gombok">
                         <a href="#" class="col-6 btn m-2">Megnézem</a>
-                        <a id="gomb_karb_5"><i class="g_karb fas fa-wrench"></i></a>
                     </div>
                 </div>
 
@@ -363,8 +319,8 @@
                 <input id="ker_mit2" class="valaszt" type="text" class="form-control" placeholder=" &#xf007;  Pl.: Idősek otthona, szakellátó">
                 <select id="ker_mod" name="ker_mod" class="valaszt" placeholder=" &#xf017;  Eseti, Ott lakás, Mind kettő"=">
                     <option value="Eseti">Eseti</option>
-                    <option value="Ott lakás">Ott lakás</option>
-                    <option value="Mind kettő">Mind kettő</option>
+                    <option value="Ott lakás">Ottlakás</option>
+                    <option value="Mind kettő">Mindkettő</option>
                 </select>
 <!--                 <input id="ker_ido2" class="valaszt" type="text" class="form-control"  placeholder=" &#xf017;  Eseti, Ott lakás, Mind kettő"> -->
             </form>
