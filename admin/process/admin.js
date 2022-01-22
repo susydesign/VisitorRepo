@@ -4,7 +4,7 @@ $(document).ready(function () {
         window.open(newablak,"admin");
     })
     $("#menu2").click(function(){
-        var newablak="http://visitorcare.eu/admin/view/otthon.php";
+        var newablak="http://visitorcare.eu/admin/intezmeny/view/intezmeny.php";
         window.open(newablak,"admin");
     })
     $("#menu3").click(function(){

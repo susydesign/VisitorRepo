@@ -18,28 +18,21 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../view/admin.css">
+    <link rel="stylesheet" type="text/css" href="intezmeny.css">
+
 
 </head>
 <body>
-    <?php 
-        session_start();
-        if( !$_SESSION['nlogin']){
-            echo "be kell lépni!";
-
-        }else{
-            echo $_SESSION['felh_name'];
-        }
-    ?>
     <div id="header_vc" class="container-fluid">
-       <div id="header_1sor" class="row align-items-center">
+        <div id="header_1sor" class="row align-items-center">
             <div class="col-1 col-md-1 d-none d-md-block"></div>
             <div class="col-12 col-md-10" style="padding-top:10px;padding-bottom:10px">
                 <div class="row">
                     <div id="logodiv" class="col-3 d-flex justify-content-start col-md-4">
-                        <img src="../../images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
+                        <img src="../../../images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
                     </div>
                     <div id="kontaktok" class="col-9 d-flex justify-content-end col-md-5 " style="padding-top: 5px;">
                             <p class="eltunik" style="color: #4a4a4a;">Ügyfélszolgálat:</p>
@@ -57,24 +50,68 @@
             <div class="col-1 col-md-1 d-none d-md-block"></div>
         </div>
     </div>
+    
     <div id="wrapper">
-        <div id="menu_oldal">
-            <p id="menu1" class="menu"><a href="klinika.php">Magánklinikák</a></p>
-            <p id="menu2" class="menu"><a href="../../admin/intezmeny/view/intezmeny.php">Intézmények</a></p>
-            <p id="menu3" class="menu"><a href="apolo.php">Ápolók</a></p>
-            <p id="menu4" class="menu"><a href="hirek.php">Hírek</a></p>
-            <p id="menu5" class="menu"><a href="banner.php">Bannerek</a></p>
-            <p id="menu7" class="menu"><a href="jelentkezok.php">Új jelentkezők</a></p>
-            <p id="menu6" class="menu"><a href="../../index.php">Home</a></p>
 
+        <div id="menu_oldal">
+            <p id="menu1" class="menu">Magánklinikák</p>
+            <p id="menu2" class="menu aktiv">Intézmények</p>
+            <p id="menu3" class="menu">Ápolók</p>
+            <p id="menu4" class="menu">Hírek</p>
+            <p id="menu5" class="menu">Bannerek</p>
+            <p id="menu7" class="menu">Új jelentkezők</p>
+            <p id="menu6" class="menu">Home</p>
         </div>
+
         <div id="session">
-            <h1 id="sess_cim">Adminisztrációs oldal</h1>
-            <p id="sess_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores labore aliquam et atque similique recusandae accusamus eius nemo iure quo consequatur neque, eos minus veniam, tempora deleniti nulla laudantium! Porro fugiat deserunt quod voluptate! Dolore iste sunt, ea assumenda, nihil officia quis voluptates magnam eos animi quidem architecto vero, mollitia voluptatibus porro libero non blanditiis harum praesentium sapiente ad autem accusamus. Accusantium dolore corporis non amet culpa animi natus pariatur magnam corrupti cupiditate repudiandae autem ipsam hic, iste aspernatur architecto nostrum tempora eveniet eos quos, reiciendis doloremque praesentium! Laudantium pariatur, minima natus laboriosam inventore recusandae a quae architecto impedit quam.</p>
-            <div id="sess_torzs"></div>
-        </div>
-    </div>
-    <!-- Scriptek -->  
+            <h1 id="sess_cim">Intézmények oldal</h1>
+            <p id="info_userId"></p>
+            <p id="sess_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati perferendis qui vero, officiis sapiente laboriosam, commodi temporibus provident animi nulla omnis eius aperiam? Maxime facilis officia accusantium quas voluptas officiis laboriosam asperiores ea. Ipsa in minima impedit ut nostrum obcaecati quam et autem illo aut voluptatum dignissimos iure repudiandae.</p>
+            <div id="sess_torzs">
+                <div id="showData_div">
+                    <table id="showData" 
+                        class="table table-bordered 
+                                table-condensed table-striped">
+                        <thead>
+                            <tr>
+                            <th>Id</th>
+                            <th>Intézmény neve</th>
+                            <th>Irsz</th>
+                            <th>Város</th>
+                            <th>Utca</th>
+                            <th>Hsz</th>
+                            <th>Telefon</th>
+                            <th>E-mail</th>
+                            <th>Kapcsolattartó</th>
+                            <th>Státusz</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> <!-- shoeData_div END -->
+
+                <form id="szekcio_1">
+                    <p id="int_id" class="hide"></p>
+                    <input type="text" name="i_nev" id="i_nev" placeholder="Az intézmény neve">
+                    <input type="text" name id="i_varos" placeholder="Település neve"></input>
+                    <input type="text" name id="i_irsz" placeholder="Irányítószám"></input>
+                    <input type="text" name id="i_utca" placeholder="Utca neve"></input>
+                    <input type="text" name id="i_hsz" placeholder="Házszám"></input>
+                    <p id="i_elerhetoseg_cim" class="label_klin">Elérhetőségek:</p>
+                    <input id="i_telefon" placeholder="Telefonszám"></input>
+                    <input id="i_email" placeholder="E-mail"></input>
+                    <input id="i_kapcs" placeholder="Kapcsolattartó neve"></input>
+                    <p id="rolunk_cim" class="label_klin">Intézmény leírása</p>
+                    <input id="i_rolunk" class="card-text" placeholder="Intézmény rövid ismertetése"></input>
+                    <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
+                    <a id="gomb_c" href="#" class="col-6 btn m-2">Új Intézmény</a>
+                </form>
+
+            </div> <!-- sess_torzs END -->
+        </div> <!-- Session END -->      
+
+    </div> <!-- wraooer END -->
+
+ <!-- Scriptek -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
@@ -83,8 +120,8 @@
     <script>
         $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
-    <script src="../process/admin.js"></script>
-    <script src="../process/admin.js"></script>
+    <script src="../../process/admin.js"></script>
+    <script src="../process/intezmeny.js"></script>
 </body>
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->

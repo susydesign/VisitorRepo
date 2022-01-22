@@ -232,6 +232,7 @@ $(document).ready(function () {
             if(szak_id == '0'){
                 alert("Ki kell választani egy szakrendelést!")
             }else{
+                idopont_Nullaz();
                 load_szakrendelo(szak_id,klinika_id);
                 $("#gomb_szak").click(function () {
                     rendelo_id = $("#rendelo_id").html();
@@ -239,6 +240,23 @@ $(document).ready(function () {
                     modify_szakrendelo(rendelo_id);
                 })
             }
+        }
+
+        function idopont_Nullaz() {
+            $("#day1_nyit").val("00:00");
+            $("#day1_zar").val("00:00");
+            $("#day2_nyit").val("00:00");
+            $("#day2_zar").val("00:00");
+            $("#day3_nyit").val("00:00");
+            $("#day3_zar").val("00:00");
+            $("#day4_nyit").val("00:00");
+            $("#day4_zar").val("00:00");
+            $("#day5_nyit").val("00:00");
+            $("#day5_zar").val("00:00");
+            $("#day6_nyit").val("00:00");
+            $("#day6_zar").val("00:00");
+            $("#day7_nyit").val("00:00");
+            $("#day7_zar").val("00:00");
         }
 
 

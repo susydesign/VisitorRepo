@@ -218,7 +218,7 @@
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="width: 200px;">Telefon szám</span>
+                                <span class="input-group-text" style="width: 200px;">Telefonszám</span>
                             </div>
                             <input type="text" class="form-control" id="r_telefon" aria-label="phone mumber" placeholder="+36 30 1234567">
                             <div class="input-group-append">
@@ -231,7 +231,7 @@
                             </div>
                             <input type="text" class="form-control" id="ar" aria-label="Amount (to the nearest Ft)">
                             <div class="input-group-append">
-                                <span class="input-group-text">Ft/óra</span>
+                                <span class="input-group-text">Ft</span>
                             </div>
                         </div>
 

@@ -80,15 +80,20 @@ footer{
     text-align: center;
     border-radius: 45px;
     background-color: var(--pink);
-    box-shadow:  3px 3px 10px var(--szurke);
-    
+    box-shadow:  3px 3px 10px var(--szurke);    
 }
 .menu p{
     font-size: 1em;
 }
+.menu a{
+    text-decoration: none;
+    color: var(--vilagos_szurke);
+}
 .menu:hover{
     cursor: pointer;
     opacity: 0.7;
+    color: white;
+    font-weight: 700;
 }
 .aktiv{
     background-color: var(--vilagos_szurke);
