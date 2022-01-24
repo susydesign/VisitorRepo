@@ -19,6 +19,10 @@ h1 {
     color: var(--sotet_szurke);
     font-size: 24px;
 }
+a {
+    text-decoration: none;
+    color: var(--vilagos_szurke);
+}
 
 #wrapper{
     width: 95%;

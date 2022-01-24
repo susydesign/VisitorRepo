@@ -2,8 +2,8 @@
 require_once('../../model/connect.php');
 
 $jel_otthon = [
-     'jel_o_id' => $_POST['jel_o_id'],
-     'o_status' => $_POST['o_status']
+     'jel_o_id' => $_POST['jel_id'],
+     'o_status' => $_POST['status']
 ];
 
 $sql = 'UPDATE jel_otthon 

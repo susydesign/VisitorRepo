@@ -68,12 +68,13 @@
             <div id="sess_torzs">
                 <div id="gombok">
                     <p id="o_db" class="menu">Intézmény jelentkezők</p>
-                    <p id="k_db" class="menu">Ápoló jelentkezők</p>
+                    <p id="a_db" class="menu">Ápoló jelentkezők</p>
                 </div>
 
-                <div id="showData_div">
-                    <table id="showData" 
-                        class="table table-bordered 
+                <div id="showData_div" class="hide">
+
+                    <table id="showData_int" 
+                        class=" hide table table-bordered 
                                 table-condensed table-striped">
                         <thead>
                             <tr>
@@ -89,6 +90,33 @@
                             </tr>
                         </thead>
                     </table>
+
+                    <table id="showData_apolo" 
+                        class=" hide table table-bordered 
+                                table-condensed table-striped">
+                        <thead>
+                            <tr>
+                            <th>Id</th>
+                            <th>Név</th>
+                            <th>Fénykép</th>
+                            <th>Születési idő</th>
+                            <th>Irsz</th>
+                            <th>Város</th>
+                            <th>utca</th>
+                            <th>hsz</th>
+                            <th>Telefon</th>
+                            <th>E-mail</th>
+                            <th>Végzettség</th>
+                            <th>Végz. év</th>
+                            <th>Végz. doksi</th>
+                            <th>Óradíj</th>
+                            <th>Minősítés</th>
+                            <th>status</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+
                 </div>
 
                 <div id="ok_card">
@@ -104,6 +132,29 @@
                     <p id="btn_rog" class="menu">Aktivál</p>
                     <p id="btn_del" class="menu">Töröl</p>
                 </div>
+
+                <div id="apolo_card" class="hide">
+                    <input id="a_nev" class="form-control"></input>
+                    <p id="a_jel_id"></p>
+                    <input id="a_fenykep" class="form-control"></input>
+                    <input id="a_szul" class="form-control"></input>
+                    <input id="a_irsz" class="form-control"></input>
+                    <input id="a_varos" class="form-control"></input>
+                    <input id="a_utca" class="form-control"></input>
+                    <input id="a_hsz" class="form-control"></input>
+                    <input id="a_telefon" class="form-control"></input>
+                    <input id="a_email" class="form-control"></input>
+                    <input id="a_v_megnev" class="form-control"></input>
+                    <input id="a_v_ido" class="form-control"></input>
+                    <input id="a_v_doksi" class="form-control"></input>
+                    <input id="a_oradij" class="form-control"></input>
+                    <input id="a_minosites" class="form-control"></input>
+                    <p id="a_status"></p>
+                    <p id="btn_a_rog" class="menu">Aktivál</p>
+                    <p id="btn_a_del" class="menu">Töröl</p>
+                </div>
+
+
 
             </div>
         </div>
