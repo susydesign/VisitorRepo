@@ -603,43 +603,6 @@
     </div>
 
 
-    <div id="pinks" class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 m-4" style="text-align: center;" >
-                <h1>Pink kockák</h1>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-3">
-                <div class="card card-best" style="width: 18rem; background-color: #E6426E; height: 250px;">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="card card-best" style="width: 18rem; background-color: #E6426E; height: 250px;">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="card card-best" style="width: 18rem; background-color: #E6426E; height: 250px;">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="card card-best" style="width: 18rem; background-color: #E6426E; height: 250px;">
-                    <div class="card-body">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        </div>
-    </div>
 
     <div id="prartnerink" class="container">
         <div class="row justify-content-center">

@@ -21,11 +21,48 @@ h1 {
 }
 a {
     text-decoration: none;
-    color: var(--vilagos_szurke);
+    color: var(--sotet_szurke);
 }
 
+#wrapper_main{
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto,100px) 1fr minmax(auto, 200px);
+}
+
+#header_vc{
+    grid-column: 1/end;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: minmax(auto,100px);
+    align-items: center;
+}
+        #logodiv{
+            grid-column: 1/2;
+            grid-row: 1/end;
+            justify-self: center;
+        }
+        #kontaktok{
+            display: flex;
+            grid-column: 2/3;
+            grid-row: 1/end;
+            justify-self: end;
+        }
+        #gomb_kilep{
+            grid-column: 3/end;
+            grid-row: 1/end;
+            max-height: 40px;
+            max-width: 130px;
+            justify-self: center;
+        }
+
 #wrapper{
-    width: 95%;
+/*     width: 95%; */
+    grid-column: 1/end;
+    grid-row: 2/3;
     display: grid;
     margin: 20px;
     grid-template-columns: 1fr 4fr;
@@ -48,7 +85,6 @@ a {
 #session{
     display: grid;
     grid-area: session;
-    width: 95%;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 150px 1fr auto;
     grid-gap: 5px;
@@ -70,6 +106,7 @@ a {
     grid-area: sess_desc;
     grid-column: 1/2;
     grid-row: 3/end;
+    grid-row-gap: 25px;
 }
 footer{
     grid-column: 1/end;
@@ -90,17 +127,45 @@ footer{
     font-size: 1em;
 }
 .menu a{
+    color: var(--vilagos_szurke);
     text-decoration: none;
+    font-size: 1em;
+}
+menu a:link, menu a:visited{
     color: var(--vilagos_szurke);
 }
+menu a:hover{
+    color: var(--sotet_szurke);
+}
+menu a:active{
+    color: var(--sotet_szurke);
+}
+
 .menu:hover{
     cursor: pointer;
     opacity: 0.7;
-    color: white;
+    color: var(--sotet-szurke);
     font-weight: 700;
 }
 .aktiv{
     background-color: var(--vilagos_szurke);
     color: var(--sotet_szurke);
     font-weight: 700;
+}
+.hide{
+    display: none;
+}
+
+.btn {
+    border-radius: 45px;
+    background-color: var(--pink);
+    box-shadow: 5px 5px 30px 0px var(--vilagos_pink);
+    color: var(--feher);
+}
+
+.btn:hover,:focus {
+    background-color: var(--gomb_szurke)  ;
+    color: var(--feher);
+    box-shadow: 5px 5px 20px #9F9F9F48;
+
 }

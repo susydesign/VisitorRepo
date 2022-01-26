@@ -18,28 +18,18 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.min.css">
-<!--     <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="admin.css">
-    <link rel="stylesheet" type="text/css" href="g_klinika.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.min.css">
+<!--     <link rel="stylesheet" type="text/css" href="../../../css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../view/admin.css">
+    <link rel="stylesheet" type="text/css" href="g_apolo.css">
 
 
 </head>
 <body>
-    <?php 
-            session_start();
-            if( !$_SESSION['nlogin']){
-                echo "be kell lépni!";
-
-            }else{
-                echo $_SESSION['felh_name'];
-            }
-    ?>
-
     <div id="wrapper_main">
         <div id="header_vc">
             <div id="logodiv">
-                <img src="../../images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
+                <img src="../../../images/svg/Visitor-Care-logo.svg" alt="visitor care logo fekete" class="img-responsive">
             </div>
             <div id="kontaktok" style="padding-top: 5px;">
                     <p>Ügyfélszolgálat:</p>
@@ -48,21 +38,21 @@
                     <p>E-mail:</p>
                     <p style="color: #E6426E">info@visitorcare.eu</p>
             </div>
-            <a href="../../index.php" id="gomb_kilep" class="menu" type="button">Kilépés</a>
+            <a href="../../../index.php" id="gomb_kilep" class="menu" type="button">Kilépés</a>
         </div>
 
         <div id="wrapper">
             <div id="menu_oldal">
-                <p id="menu1" class="menu aktiv">Magánklinikák</p>
-                <p id="menu2" class="menu"><a href="../intezmeny/view/intezmeny.php">Intézmények</a></p>
-                <p id="menu3" class="menu"><a href="../apolo/view/g_apolo.php">Ápolók</a></p>
+                <p id="menu1" class="menu"><a href="../../view/g_klinika.php">Magánklinikák</a></p>
+                <p id="menu2" class="menu"><a href="../../intezmeny/view/intezmeny.php">Intézmények</a></p>
+                <a id="menu3" class="menu aktiv" href="../../apolo/view/g_apolo.php">Ápolók</a>
                 <p id="menu4" class="menu">Hírek</p>
                 <p id="menu5" class="menu">Bannerek</p>
-                <p id="menu7" class="menu"><a href="../view/jelentkezok.php"> Új jelentkezők</a></p>
-                <p id="menu6" class="menu"><a href="../../index.php">Home</a></p>
+                <p id="menu7" class="menu"><a href="../../view/jelentkezok.php">Új jelentkezők</a></p>
+                <p id="menu6" class="menu"><a href="../../../index.php">Home</a></p>
             </div>
             <div id="session">
-                <h1 id="sess_cim">Magánklinikák oldal</h1>
+                <h1 id="sess_cim">Ápolók oldal</h1>
                 <p id="info_userId"></p>
                 <p id="sess_desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit dignissimos unde, dolorem omnis mollitia recusandae earum iusto delectus obcaecati et facere sapiente vitae, error placeat eaque reiciendis. Eligendi aliquam at totam doloribus ipsum dignissimos voluptatibus error ratione temporibus molestiae natus debitis ducimus dolorem iusto est cupiditate alias perferendis, sapiente praesentium.</p>
                 <div id="sess_torzs">
@@ -73,66 +63,64 @@
                             <thead>
                                 <tr>
                                 <th>Id</th>
-                                <th>Klinika neve</th>
+                                <th>Név</th>
+                                <th>Fénykép</th>
+                                <th>Születési idő</th>
                                 <th>Irsz</th>
                                 <th>Város</th>
-                                <th>Utca</th>
-                                <th>Hsz</th>
+                                <th>utca</th>
+                                <th>hsz</th>
                                 <th>Telefon</th>
-                                <th>Mobil</th>
                                 <th>E-mail</th>
-                                <th>Weboldal</th>
-                                <th>Logo</th>
-                                <th>Rólunk</th>
-                                <th>Térkép</th>
+                                <th>Végzettség</th>
+                                <th>Végz. év</th>
+                                <th>Végz. doksi</th>
+                                <th>Óradíj</th>
+                                <th>Minősítés</th>
+                                <th>status</th>
                                 </tr>
                             </thead>
                         </table>
                     </div>
 
-                    <form id="szekcio_1">
-                        <p id="klinika_id" class="hide"></p>
-                        <img id="k_logo_kep" class="" src="">
-                        <input type="text" name="k_logo" id="k_logo" placeholder="logo fájl neve">
-                        <input type="text" name="klinika_nev" id="klinika_nev" placeholder="A klinika neve">
-                        <input type="text" name id="k_address_varos" placeholder="Település neve"></input>
-                        <input type="text" name id="k_address_irsz" placeholder="Irányítószám"></input>
-                        <input type="text" name id="k_address_utca" placeholder="Utca neve"></input>
-                        <input type="text" name id="k_address_hsz" placeholder="Házszám"></input>
-                        <p id="k_elerhetoseg_cim" class="label_klin">Elérhetőségek:</p>
-                        <input id="k_phone" placeholder="vezetékes szám" placeholder="Vonalas telefon"></input>
-                        <input id="k_mobil" placeholder="mobil szám"></input>
-                        <input id="k_email" placeholder="E-mail"></input>
-                        <input id="k_web" placeholder="pl.: www.klinika.hu"></input>
-                        <p id="rolunk_cim" class="label_klin">Klinika leírása</p>
-                        <input id="k_rolunk" class="card-text" placeholder="Klinika rövid ismertetése"></input>
-                        <p id="geoframe_cim" class="label_klin">Geoframe adat</p>
-                        <input id="geoframe" class="card-text" placeholder="google térkép megosztás frame-je"></input>
-                        <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
-                        <a id="gomb_c" href="#" class="col-6 btn m-2">Új Klinika</a>
-                    </form>
+                    <form id="a_card">
+                        <p id="a_id" class="hide"></p>
+                        <img id="fenykep" class="" src="">
+                        <input type="text" name="a_fenykep" id="a_fenykep" placeholder="logo fájl neve">
+                        <input type="text" name="a_szul" id="a_szul" placeholder="Születési dátum">
+                        <input type="text" name="a_nev" id="a_nev" placeholder="Ápolo neve">
+                        <input type="text" name="a_varos" id="a_varos" placeholder="Település neve"></input>
 
-                    <div id="urlap">
+                        <p id="elerhetoseg_cim" class="label_klin">Elérhetőségek:</p>
+                        <input type="text" name="a_irsz" id="a_irsz" placeholder="Irányítószám"></input>
+                        <input type="text" name="a_utca" id="a_utca" placeholder="Utca neve"></input>
+                        <input type="text" name="a_hsz" id="a_hsz" placeholder="Házszám"></input>
+                        <input type="phone" name="a_telefon" id="a_telefon" placeholder="Telefonszám"></input>
+                        <input type="email" name="a_email" id="a_email" placeholder="E-mail"></input>
+
+                        <p id="rolunk_cim" class="label_klin">Ápló bemutatkozása</p>
+                        <input type="text" name="a_v_megnev" id="a_v_megnev" placeholder="Végzettség. pl.: Masszőr"></input>
+                        <input type="text" name="a_v_ido" id="a_v_ido" placeholder="Végzettség időpontja"></input>
+                        <input type="text" name="a_v_doksi" id="a_v_doksi" placeholder="doksi neve. pl.: diploma.pdf"></input>
+                        <input type="text" name="a_oradij "id="a_oradij" class="card-text" placeholder="Ft / Óra"></input>
+                        <input type="text" name="a_minosites "id="a_minosites" class="card-text" placeholder="Minősítés 1-5-ig"></input>
+                        <input type="text" name="a_v_doksi" id="a_v_doksi" placeholder="doksi neve. pl.: diploma.pdf"></input>
+                        <input type="text" name="a_bemutatkozo" id="a_bemutatkozo" placeholder="Rövid, szakmai bemutatkozó"></input>
+                        <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
+                        <a id="gomb_c" href="#" class="col-6 btn m-2">Új Ápoló</a>
+                    </form>
+                    <div id="urlap" class="hide">
                         <form>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="szak_id">Szakrendelés</label>
+                                    <label class="input-group-text" for="szak_id">Szakterület</label>
                                 </div>
                                 <select class="custom-select" id="szak_id">
-                                    <option value="0" selected>Válasszon szakrendelőt...</option>
-                                    <option value="1">Sürgősségi ellátás/Acut ellátás</option>
-                                    <option value="2">Diagnosztika</option>
-                                    <option value="3">Belgyógyászati ellátás</option>
-                                    <option value="4">Baleseti sebészet/Traumatológia</option>
-                                    <option value="5">Hasi sebészeti ellátás</option>
-                                    <option value="6">Érsebészet</option>
-                                    <option value="7">Szülészet</option>
-                                    <option value="8">Nőgyógyászat</option>
-                                    <option value="9">Urológia</option>
-                                    <option value="10">Plasztikai sebészet</option>
-                                    <option value="11">Fül-orr-gégészet</option>
-                                    <option value="12">Szemészet</option>
-                                    <option value="13">Pszichés támogatás</option>
+                                    <option value="0" selected>Válasszon szakterületet...</option>
+                                    <option value="1">Általános ápoló</option>
+                                    <option value="2">Gyógymasszőr</option>
+                                    <option value="3">Gyógytornász</option>
+                                    <option value="4">Betegszállítás</option>
                                 </select>
                                 <p id="rendelo_id" class="hide">RI</p>
                             </div>
@@ -184,7 +172,8 @@
                                 </div>
                                 <input id="day7_nyit" type="text" class="form-control" placeholder="00:00" value="00:00">
                                 <input id="day7_zar"type="text" class="form-control" placeholder="00:00" value="00:00">
-                            </div> 
+                            </div>
+        
 
                             <div class="input-group mb-3 p-3">
                                 <div class="form-check p-3">
@@ -193,11 +182,11 @@
                                 </div>
                                 <div class="form-check p-3">
                                     <input type="checkbox" class="form-check-input" id="felnot">
-                                    <label class="form-check-label" for="felnot">Felnőtt rendelés</label>
+                                    <label class="form-check-label" for="felnot">Újszülött</label>
                                 </div>
                                 <div class="form-check p-3">
                                     <input type="checkbox" class="form-check-input" id="gyermek">
-                                    <label class="form-check-label" for="gyermek>Gyermek">Gyermek rendelés</label>
+                                    <label class="form-check-label" for="gyermek>Gyermek">Gyermek gonozás</label>
                                 </div>
                                 <div class="form-check p-3">
                                     <input type="checkbox" class="form-check-input" id="szemelyes">
@@ -205,7 +194,7 @@
                                 </div>
                                 <div class="form-check p-3">
                                     <input type="checkbox" class="form-check-input" id="online">
-                                    <label class="form-check-label" for="online">On-line rendelés</label>
+                                    <label class="form-check-label" for="online">On-line</label>
                                 </div>
                                 <div class="form-check p-3">
                                     <input type="checkbox" class="form-check-input" id="gondozas">
@@ -233,7 +222,7 @@
                             </div>
 
                             <div>
-                                <a id="gomb_szak" href="#" class="col-6 btn m-2">Rögzít</a>
+                            <a id="gomb_szak" href="#" class="col-6 btn m-2">Rögzít</a>
                             </div>
                         </form >
                         <div id="eredmeny" class="contaniner">
@@ -247,13 +236,9 @@
                             </div>
                         </div>
                     </div>
-
-                    <div id="szekcio_2">
-                        <div id="terkep_1"></div>
-                    </div>
                 </div> <!-- sess_torzs END -->
-            </div>  <!-- Session END -->
-        </div> <!-- Wraooer END -->
+            </div>  <!-- session END -->
+        </div> <!-- wrapper END -->
 
         <footer class="text-center text-lg-start bg-dark text-muted">
             <!-- Section: Social media -->
@@ -379,7 +364,11 @@
             <!-- Copyright -->
         </footer>
 
-    </div> <!-- wrapper_main END-->
+
+    </div><!-- wrapper_main -->
+
+
+
 
     <!-- Scriptek -->  
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
@@ -390,7 +379,7 @@
     <script>
         $( function() { $( "#ker_ido" ).datepicker(); } );
         </script>
-<!--     <script src="../process/admin.js"></script> -->
-    <script src="../process/g_klinika.js"></script>
+    <!-- <script src="../../process/admin.js"></script> -->
+    <script src="../process/g_apolo.js"></script>
 
 </body>

@@ -31,6 +31,4 @@ $(document).ready(function () {
         var newablak="http://visitorcare.eu/index.php";
         window.open(newablak,"home");
     })
-
-
 });

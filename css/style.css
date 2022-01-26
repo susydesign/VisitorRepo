@@ -243,7 +243,7 @@ hr{
 @media (max-width :768px) {
  
 }
-@media (max-width :992px) {
+@media screen and (max-width :992px) {
     p {
         font-size: 0.75rem;
     }
