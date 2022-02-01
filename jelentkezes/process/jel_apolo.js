@@ -16,7 +16,7 @@ $(document).ready(function () {
             var a_v_ido = $("#a_v_ido").val();
             var a_v_doksi = $("#a_v_doksi").val();
             var a_oradij = $("#a_oradij").val();
-            var a_minosites = $("#a_minosites").val();
+            var a_bemut = $("#a_bemut").val();
             var o_status = 0;
 
             if(a_nev !=''){
@@ -38,7 +38,7 @@ $(document).ready(function () {
                       a_v_ido:a_v_ido,
                       a_v_doksi:a_v_doksi,
                       a_oradij:a_oradij,
-                      a_minosites:a_minosites,
+                      a_bemut:a_bemut,
                       o_status:o_status
                     },
                     error: function(request){
@@ -49,7 +49,6 @@ $(document).ready(function () {
                             alert("Hiba ág: "+data.error);
                             window.close()
                         }else{
-                            alert("Jelentkezési ürlap rögzítve")
                             window.close()
                         }
                     }

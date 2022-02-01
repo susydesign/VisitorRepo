@@ -2,7 +2,7 @@
 /* load_klinika.js hívja a prof_klinika.php betöltésekor*/
 require_once('../../../model/connect.php');
 
-$sql = "SELECT * FROM apolo";
+$sql = "SELECT * FROM apolo WHERE a_status=1";
 
 $result = $conn->prepare($sql);
 $result->execute();

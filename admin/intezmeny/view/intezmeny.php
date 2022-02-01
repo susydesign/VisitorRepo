@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -27,10 +31,8 @@
 </head>
 <body>
     <?php 
-        session_start();
         if( !$_SESSION['nlogin']){
             echo "be kell lépni!";
-
         }else{
             echo $_SESSION['felh_name'];
         }
@@ -104,8 +106,9 @@
                         <input id="i_kapcs" placeholder="Kapcsolattartó neve"></input>
                         <p id="rolunk_cim" class="label_klin">Intézmény leírása</p>
                         <input id="i_rolunk" class="card-text" placeholder="Intézmény rövid ismertetése"></input>
-                        <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
-                        <a id="gomb_c" href="#" class="col-6 btn m-2">Új Intézmény</a>
+                        <a id="gomb_m" href="#" class="col-4 btn">Módosítás</a>
+                        <a id="gomb_c" href="#" class="col-4 btn">Új Intézmény</a>
+                        <a id="gomb_d" href="#" class="col-4 btn">Törlés</a>
                     </form>
 
                 </div> <!-- sess_torzs END -->

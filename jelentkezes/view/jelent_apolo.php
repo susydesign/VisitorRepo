@@ -81,8 +81,12 @@
                 <input id="a_oradij" name="a_oradij" type="text" class="form-control" placeholder="pl: 8000" aria-label="a_oradij" aria-describedby="a_oradij">
             </div>
             <div class="input-group flex-nowrap p-3">
-                <span class="input-group-text w-25">Beminősítés</span>
-                <input id="a_minosites" name="a_minosites" type="text" class="form-control" placeholder="pl: 3. kategória" aria-label="a_minosites" aria-describedby="a_minosites">
+                <span class="input-group-text w-25">Bemutatkozás</span>
+<!--                 <input id="a_bemut" name="a_bemut" type="text" class="form-control" placeholder="Rövid szakmai bemutatkozás" aria-label="a_bemut" aria-describedby="a_bemut">
+ -->
+                <textarea id="a_bemut" rows="4" cols="50" name="a_bemut" form="usrform">Rövid szakmai bemutatkozás...</textarea>
+
+
             </div>
 
             <button id="btn_bekuld" class="menu" type="submit">Beküld</button>

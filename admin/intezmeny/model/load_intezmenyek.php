@@ -3,7 +3,7 @@
 require_once('../../../model/connect.php');
 
 
-$sql = "SELECT * FROM intezmeny";
+$sql = "SELECT * FROM intezmeny WHERE i_status=1";
 
 $result = $conn->prepare($sql);
 $result->execute();

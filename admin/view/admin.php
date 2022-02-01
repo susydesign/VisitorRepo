@@ -46,7 +46,8 @@
                     <p>E-mail:</p>
                     <p style="color: #E6426E">info@visitorcare.eu</p>
             </div>
-            <button id="gomb_kilep" class="menu" type="button">Kilépés</button>
+            <a href="../../../index.php" id="gomb_kilep" class="menu" type="button">Kilépés</a>
+
         </div>
 
         <div id="wrapper">

@@ -11,7 +11,8 @@ $sql_in = "UPDATE intezmeny
                 i_telefon = :i_telefon,
                 i_email = :i_email,
                 i_kapcs = :i_kapcs,
-                i_rolunk = :i_rolunk
+                i_rolunk = :i_rolunk,
+                i_status = :i_status
             WHERE int_id = :int_id";
 
 $result_in = $conn->prepare($sql_in);
@@ -26,6 +27,7 @@ $result_in->bindParam(':i_telefon', $i_telefon);
 $result_in->bindParam(':i_email', $i_email);
 $result_in->bindParam(':i_kapcs', $i_kapcs);
 $result_in->bindParam(':i_rolunk', $i_rolunk);
+$result_in->bindParam(':i_status', $i_status);
 
 if(isset($_POST["int_id"])){
     $int_id = $_POST["int_id"];
@@ -77,6 +79,11 @@ if(isset($_POST["i_rolunk"])){
     $i_rolunk = $_POST["i_rolunk"];
 }else{
     $i_rolunk = "";
+};
+if(isset($_POST["i_status"])){
+    $i_status = $_POST["i_status"];
+}else{
+    $i_status = "";
 };
 
 

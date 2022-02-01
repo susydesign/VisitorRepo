@@ -17,7 +17,8 @@ $sql_in = "UPDATE apolo
                 a_v_ido = :a_v_ido,
                 a_oradij = :a_oradij,
                 a_minosites = :a_minosites,
-                a_bemutatkozo = :a_bemutatkozo
+                a_bemut = :a_bemut,
+                a_status = :a_status
             WHERE a_id = :a_id";
 
 $result_in = $conn->prepare($sql_in);
@@ -37,7 +38,8 @@ $result_in->bindParam(':a_v_ido', $a_v_ido);
 $result_in->bindParam(':a_v_doksi', $a_v_doksi);
 $result_in->bindParam(':a_oradij', $a_oradij);
 $result_in->bindParam(':a_minosites', $a_minosites);
-$result_in->bindParam(':a_bemutatkozo', $a_bemutatkozo);
+$result_in->bindParam(':a_bemut', $a_bemut);
+$result_in->bindParam(':a_status', $a_status);
 
 $a_status = 1;
 
@@ -116,10 +118,15 @@ if(isset($_POST["a_minosites"])){
 }else{
     $a_minosites = "";
 };
-if(isset($_POST["a_bemutatkozo"])){
-    $a_bemutatkozo = $_POST["a_bemutatkozo"];
+if(isset($_POST["a_bemut"])){
+    $a_bemut = $_POST["a_bemut"];
 }else{
-    $a_bemutatkozo = "";
+    $a_bemut = "";
+};
+if(isset($_POST["a_status"])){
+    $a_status = $_POST["a_status"];
+}else{
+    $a_status = "";
 };
 
 

@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#showData").on('click','.ezt', function(){
 
         $("#a_card").css('display','grid');
-        $("#urlap").css('display','grid');
+        $("#urlap").css('display','block');
 
         var currentRow=$(this).closest("tr");
 
@@ -21,8 +21,9 @@ $(document).ready(function () {
         var akt_a_v_ido = currentRow.find("td:eq(11)").text();
         var akt_a_v_doksi = currentRow.find("td:eq(12)").text();
         var akt_a_oradij = currentRow.find("td:eq(13)").text();
-        var akt_a_minosites = currentRow.find("td:eq(14)").text();
-        var akt_a_status = currentRow.find("td:eq(15)").text();
+        var akt_a_bemut = currentRow.find("td:eq(14)").text();
+        var akt_a_minosites = currentRow.find("td:eq(15)").text();
+        var akt_a_status = currentRow.find("td:eq(16)").text();
 
           
         $('#a_status').val(akt_a_status)
@@ -40,6 +41,7 @@ $(document).ready(function () {
         $('#a_v_ido').val(akt_a_v_ido);
         $('#a_v_doksi').val(akt_a_v_doksi);
         $('#a_oradij').val(akt_a_oradij);
+        $('#a_bemut').val(akt_a_bemut);
         $('#a_minosites').val(akt_a_minosites);
         $('#a_status').val(akt_a_status);
     
@@ -107,15 +109,16 @@ $(document).ready(function () {
                     "<td>" + product.a_v_ido + "</td>" +
                     "<td>" + product.a_v_doksi + "</td>" +
                     "<td>" + product.a_oradij + "</td>" +
+                    "<td><div id='a_tatus' class='max-text'>" + product.a_bemut + "</div></td>" +
                     "<td>" + product.a_minosites + "</td>" +
-                    "<td><div id='td_rolunk' class='max-text'>" + product.a_bemut + "</div></td>" + 
+                    "<td>" + product.a_status + "</td>" + 
                 "</tr>";
             return ret;
           }
   }
 
 
-    $("#gomb_c").click(function(){
+/*     $("#gomb_c").click(function(){
         if($("#klinika_id").html() != ''){
             location.reload();
         }
@@ -173,7 +176,7 @@ $(document).ready(function () {
         }
 
     })
-
+ */
     $("#gomb_m").click(function(){
         bekuld_m()
         function bekuld_m(){
@@ -190,9 +193,10 @@ $(document).ready(function () {
             var a_v_megnev = $("#a_v_megnev").val();
             var a_v_ido = $("#a_v_ido").val();
             var a_v_doksi = $("#a_v_doksi").val();
+            var a_bemut = $("#a_bemut").val();
             var a_oradij = $("#a_oradij").val();
             var a_minosites = $("#a_minosites").val();
-            var a_bemutatkozo = $("#a_bemutatkozo").val();
+            var a_status = 1;
     
             if(a_nev !=''){
                 $.ajax({
@@ -214,9 +218,10 @@ $(document).ready(function () {
                         a_v_megnev:a_v_megnev,
                         a_v_ido:a_v_ido,
                         a_v_doksi:a_v_doksi,
+                        a_bemut:a_bemut,
                         a_oradij:a_oradij,
                         a_minosites:a_minosites,
-                        a_bemutatkozo:a_bemutatkozo
+                        a_status:a_status
                     },
                     error: function(request){
                       alert('Ajax error: '+request.responsText);
@@ -237,9 +242,85 @@ $(document).ready(function () {
 
     })
 
+    $("#gomb_d").click(function(){
+        bekuld_d()
+        function bekuld_d(){
+            var a_id = $("#a_id").html();
+            var a_nev = $("#a_nev").val();
+            var a_fenykep = $("#a_fenykep").val();
+            var a_szul = $("#a_szul").val();
+            var a_irsz = $("#a_irsz").val();
+            var a_varos = $("#a_varos").val();
+            var a_utca = $("#a_utca").val();
+            var a_hsz = $("#a_hsz").val();
+            var a_telefon = $("#a_telefon").val();
+            var a_email = $("#a_email").val();
+            var a_v_megnev = $("#a_v_megnev").val();
+            var a_v_ido = $("#a_v_ido").val();
+            var a_v_doksi = $("#a_v_doksi").val();
+            var a_bemut = $("#a_bemut").val();
+            var a_oradij = $("#a_oradij").val();
+            var a_minosites = $("#a_minosites").val();
+            var a_status = 3;
+    
+            if(a_nev !=''){
+                $.ajax({
+                    url: "../model/mod_apolo.php",
+                    method: "POST",
+                    dataType: "json",
+                    cash: false,
+                    data:{
+                        a_id:a_id,
+                        a_nev:a_nev, 
+                        a_fenykep:a_fenykep,
+                        a_szul:a_szul,
+                        a_irsz:a_irsz,
+                        a_varos:a_varos,
+                        a_utca:a_utca,
+                        a_hsz:a_hsz,
+                        a_telefon:a_telefon,
+                        a_email:a_email,
+                        a_v_megnev:a_v_megnev,
+                        a_v_ido:a_v_ido,
+                        a_v_doksi:a_v_doksi,
+                        a_bemut:a_bemut,
+                        a_oradij:a_oradij,
+                        a_minosites:a_minosites,
+                        a_status:a_status
+                    },
+                    error: function(request){
+                      alert('Ajax error: '+request.responsText);
+                    },
+                    success: function (data) {
+                        if(data.error = '0'){
+                            location.reload();
+                        }else{
+                        alert("Hiba ág: "+data.error);
+                      }
+                    }
+                });
+                           
+            }else{
+                alert("A *-os mezőket ki kell tölteni")
+            }
+        }
+
+    })
+
+
     
     $("#szak_id").change(function () {
-        var szak_id = $("#szak_id").val();
+        var newLine = "\r\n";
+        var msg = "Ezt a részt átt kell beszéljük!";
+        msg += newLine;
+        msg += "Egy ápolónak több szakterülete is lehet(?)";
+        msg += newLine;
+        msg +="Szakterületenként különböző időpontokat adhat meg(?)"
+        msg += newLine;
+        msg += "Szakterületenként más, és más árral dolgozhat(?)"
+
+        alert(msg)
+/*         var szak_id = $("#szak_id").val();
         var klinika_id = $("#klinika_id").html();
 
         if(klinika_id == ''){
@@ -472,7 +553,7 @@ $(document).ready(function () {
                 }       
             });       
         }
-        
+ */        
 
     });
     

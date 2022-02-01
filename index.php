@@ -77,8 +77,7 @@
                         <nav class="nav">
                             <a class="nav-link active" href="">Főoldal</a>
                             <a class="nav-link" href="#">Rólunk</a>
-                            <a class="nav-link" href="#">Friss hírek</a>
-                            <a class="nav-link" href="#">Kapcsolat</a>
+                            <a class="nav-link" href="#footer_vc">Kapcsolat</a>
                         </nav>
                     </div>
                 </div>

@@ -74,8 +74,9 @@
                                 <th>E-mail</th>
                                 <th>Végzettség</th>
                                 <th>Végz. év</th>
-                                <th>Végz. doksi</th>
+                                <th>Végz. doksi</th>                               
                                 <th>Óradíj</th>
+                                <th>Bemutakozás</th>
                                 <th>Minősítés</th>
                                 <th>status</th>
                                 </tr>
@@ -98,16 +99,24 @@
                         <input type="phone" name="a_telefon" id="a_telefon" placeholder="Telefonszám"></input>
                         <input type="email" name="a_email" id="a_email" placeholder="E-mail"></input>
 
-                        <p id="rolunk_cim" class="label_klin">Ápló bemutatkozása</p>
+                        <p id="rolunk_cim" class="label_klin">Ápoló bemutatkozása</p>
                         <input type="text" name="a_v_megnev" id="a_v_megnev" placeholder="Végzettség. pl.: Masszőr"></input>
                         <input type="text" name="a_v_ido" id="a_v_ido" placeholder="Végzettség időpontja"></input>
                         <input type="text" name="a_v_doksi" id="a_v_doksi" placeholder="doksi neve. pl.: diploma.pdf"></input>
                         <input type="text" name="a_oradij "id="a_oradij" class="card-text" placeholder="Ft / Óra"></input>
-                        <input type="text" name="a_minosites "id="a_minosites" class="card-text" placeholder="Minősítés 1-5-ig"></input>
+                        
+                        <select id="a_minosites" name="a_minosites" class="card-text">
+                            <option value="1">1 Kategória</option>
+                            <option value="2">2 Kategória</option>
+                            <option value="3">3 Kategória</option>
+                            <option value="4">4 Kategória</option>
+                            <option value="5">5 Kategória</option>
+                        </select>
+                        
                         <input type="text" name="a_v_doksi" id="a_v_doksi" placeholder="doksi neve. pl.: diploma.pdf"></input>
-                        <input type="text" name="a_bemutatkozo" id="a_bemutatkozo" placeholder="Rövid, szakmai bemutatkozó"></input>
+                        <input type="text" name="a_bemut" id="a_bemut" placeholder="Rövid, szakmai bemutatkozó"></input>
                         <a id="gomb_m" href="#" class="col-6 btn m-2">Módosítás</a>
-                        <a id="gomb_c" href="#" class="col-6 btn m-2">Új Ápoló</a>
+                        <a id="gomb_d" href="#" class="col-6 btn m-2">Törlés</a>
                     </form>
                     <div id="urlap" class="hide">
                         <form>

@@ -110,6 +110,7 @@ $(document).ready(function () {
             var i_email = $("#i_email").val();
             var i_kapcs = $("#i_kapcs").val();
             var i_rolunk = $("#i_rolunk").val();
+            var i_status = 1;
 
             if(i_nev !=''){
                 $.ajax({
@@ -126,7 +127,8 @@ $(document).ready(function () {
                       i_telefon:i_telefon,
                       i_email:i_email,
                       i_kapcs:i_kapcs,
-                      i_rolunk:i_rolunk
+                      i_rolunk:i_rolunk,
+                      i_status:i_status
                     },
                     error: function(request){
                       alert('Ajax error: '+request.responsText);
@@ -160,6 +162,7 @@ $(document).ready(function () {
             var i_email = $("#i_email").val();
             var i_kapcs = $("#i_kapcs").val();
             var i_rolunk = $("#i_rolunk").val();
+            var i_status = 1;
 
             if(i_nev !=''){
                 $.ajax({
@@ -177,7 +180,62 @@ $(document).ready(function () {
                         i_telefon:i_telefon,
                         i_email:i_email,
                         i_kapcs:i_kapcs,
-                        i_rolunk:i_rolunk
+                        i_rolunk:i_rolunk,
+                        i_status:i_status
+                    },
+                    error: function(request){
+                      alert('Ajax error: '+request.responsText);
+                    },
+                    success: function (data) {
+                        if(data.error = '0'){
+                            location.reload();
+                        }else{
+                        alert("Hiba ág mod_intezmeny_php: "+data.error);
+                      }
+                    }
+                });
+                           
+            }else{
+                alert("A *-os mezőket ki kell tölteni")
+            }
+        }
+
+    })
+
+
+    $("#gomb_d").click(function(){
+        bekuld_d()
+        function bekuld_d(){
+            var int_id = $("#int_id").html();
+            var i_nev = $("#i_nev").val();
+            var i_irsz = $("#i_irsz").val();
+            var i_varos = $("#i_varos").val();
+            var i_utca = $("#i_utca").val();
+            var i_hsz = $("#i_hsz").val();
+            var i_telefon = $("#i_telefon").val();
+            var i_email = $("#i_email").val();
+            var i_kapcs = $("#i_kapcs").val();
+            var i_rolunk = $("#i_rolunk").val();
+            var i_status = 0;
+
+            if(i_nev !=''){
+                $.ajax({
+                    url: "../model/mod_intezmeny.php",
+                    method: "POST",
+                    dataType: "json",
+                    cash: false,
+                    data:{
+                        int_id:int_id,
+                        i_nev:i_nev, 
+                        i_irsz:i_irsz,
+                        i_varos:i_varos,
+                        i_utca:i_utca,
+                        i_hsz:i_hsz,
+                        i_telefon:i_telefon,
+                        i_email:i_email,
+                        i_kapcs:i_kapcs,
+                        i_rolunk:i_rolunk,
+                        i_status:i_status
                     },
                     error: function(request){
                       alert('Ajax error: '+request.responsText);

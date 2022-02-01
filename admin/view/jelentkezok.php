@@ -101,6 +101,7 @@
                                     <th>Végz. év</th>
                                     <th>Végz. doksi</th>
                                     <th>Óradíj</th>
+                                    <th>Bemutatkozás</th>
                                     <th>Minősítés</th>
                                     <th>status</th>
                                     </tr>
@@ -139,6 +140,7 @@
                             <input id="a_v_ido" class="form-control"></input>
                             <input id="a_v_doksi" class="form-control"></input>
                             <input id="a_oradij" class="form-control"></input>
+                            <input id="a_bemut" class="form-control"></input>                            
                             <input id="a_minosites" class="form-control"></input>
                             <p id="a_status"></p>
                             <p id="btn_a_rog" class="menu">Aktivál</p>

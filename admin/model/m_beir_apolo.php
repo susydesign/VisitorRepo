@@ -2,8 +2,8 @@
 
 require_once('../../model/connect.php');
 
-$sql_in = "INSERT INTO apolo (a_nev,a_szul,a_fenykep,a_irsz,a_varos,a_utca,a_telefon,a_email,a_v_megnev,a_v_ido,a_v_doksi,a_oradij,a_minosites,a_status) 
-            VALUES (:a_nev,:a_szul,:a_fenykep,:a_irsz,:a_varos,:a_utca,:a_telefon,:a_email,:a_v_megnev,:a_v_ido,:a_v_doksi,:a_oradij,:a_minosites,:a_status)";
+$sql_in = "INSERT INTO apolo (a_nev,a_szul,a_fenykep,a_irsz,a_varos,a_utca,a_telefon,a_email,a_v_megnev,a_v_ido,a_v_doksi,a_bemut, a_oradij,a_minosites,a_status) 
+            VALUES (:a_nev,:a_szul,:a_fenykep,:a_irsz,:a_varos,:a_utca,:a_telefon,:a_email,:a_v_megnev,:a_v_ido,:a_v_doksi,:a_bemut,:a_oradij,:a_minosites,:a_status)";
 
 $result_in = $conn->prepare($sql_in);
 
@@ -18,6 +18,7 @@ $result_in->bindParam(':a_email', $a_email);
 $result_in->bindParam(':a_v_megnev', $a_v_megnev);
 $result_in->bindParam(':a_v_ido', $a_v_ido);
 $result_in->bindParam(':a_v_doksi', $a_v_doksi);
+$result_in->bindParam(':a_bemut', $a_bemut);
 $result_in->bindParam(':a_oradij', $a_oradij);
 $result_in->bindParam(':a_minosites', $a_minosites);
 $result_in->bindParam(':a_status', $a_status);
@@ -78,6 +79,11 @@ if(isset($_POST["a_v_doksi"])){
     $a_v_doksi = $_POST["a_v_doksi"];
 }else{
     $a_v_doksi = "";
+};
+if(isset($_POST["a_bemut"])){
+    $a_bemut = $_POST["a_bemut"];
+}else{
+    $a_bemut = "";
 };
 if(isset($_POST["a_oradij"])){
     $a_oradij = $_POST["a_oradij"];

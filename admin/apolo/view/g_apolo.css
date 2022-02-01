@@ -89,10 +89,10 @@
     border-radius: 25px;
     display: none;
     grid-template-columns: repeat(3,1fr) 30px;
-    grid-template-rows: 60px 30px 200px repeat(5,40px);
+    grid-template-rows: 60px 30px 200px repeat(6,40px) 80px 40px;
     box-shadow: 7px 7px 20px #f0f0f3;
     padding: 20px;
-    grid-gap: 20px;
+    grid-gap: 10px;
 }
         #a_nev{
             grid-column: 1/5;
@@ -185,9 +185,11 @@
             grid-column: 2/3;
             grid-row: 9/10;
         }
-        #a_bemutatkozo{
+        #a_bemut{
             grid-column: 1/5;
             grid-row: 10/11;
+            overflow-y: scroll;
+            overflow-x:hidden;        
         }
 
         #gomb_m {
@@ -197,7 +199,7 @@
             align-self: center;
             justify-self: center;
         }
-        #gomb_c {
+        #gomb_d {
             grid-column: 2/end;
             grid-row: 12/13;
             height: 30px;
@@ -227,7 +229,7 @@
     background-color: var(--feher);
     box-shadow: 10px 10px 40px #00000017;
     margin: 20px 40px 20px 10px;
-    display: block;
+    display: none;
     padding: 20px;
 }
 input{

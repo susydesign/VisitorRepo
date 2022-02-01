@@ -36,6 +36,7 @@ if($result)  // Sikeres utasítás
                 'a_v_ido' => $row['a_v_ido'],                       
                 'a_v_doksi' => $row['a_v_doksi'],                       
                 'a_oradij' => $row['a_oradij'],
+                'a_bemut' => $row['a_bemut'],
                 'a_minosites' => $row['a_minosites'],                       
                 'a_status' => $row['a_status'],
                 'jel_a_db' => $count,

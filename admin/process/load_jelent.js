@@ -13,6 +13,7 @@ $(document).ready(function () {
         load_jIntezmeny();
         load_okCard();
     })
+
     $("#a_db").on('click',function(){
         $("#showData_div").removeClass("hide");
         $("#showData_int").addClass("hide");
@@ -64,6 +65,7 @@ $(document).ready(function () {
         });
 
     }
+
     function load_apooloCard() {
         $("#showData_apolo").on('click','.ezt', function(){
     
@@ -85,8 +87,9 @@ $(document).ready(function () {
             var akt_a_v_ido = currentRow.find("td:eq(11)").text();
             var akt_a_v_doksi = currentRow.find("td:eq(12)").text();
             var akt_a_oradij = currentRow.find("td:eq(13)").text();
-            var akt_a_minosites = currentRow.find("td:eq(14)").text();
-            var akt_a_status = currentRow.find("td:eq(15)").text();
+            var akt_a_bemut = currentRow.find("td:eq(14)").text();
+            var akt_a_minosites = currentRow.find("td:eq(15)").text();
+            var akt_a_status = currentRow.find("td:eq(16)").text();
 
               
             $('#a_status').val(akt_a_status)
@@ -104,6 +107,7 @@ $(document).ready(function () {
             $('#a_v_ido').val(akt_a_v_ido);
             $('#a_v_doksi').val(akt_a_v_doksi);
             $('#a_oradij').val(akt_a_oradij);
+            $('#a_bemut').val(akt_a_bemut);
             $('#a_minosites').val(akt_a_minosites);
             if(akt_a_status==0){
                 akt_a_status="Nem rögzített";
@@ -159,7 +163,8 @@ $(document).ready(function () {
            }
            
            function productBuildTableRow(product) {
-            var ret =
+            var ret ="";
+                ret =
                 "<tr>" +
                 "<td>" +
                     "<button type='button' " +
@@ -221,7 +226,8 @@ $(document).ready(function () {
            }
            
            function productBuildTableRow(product) {
-            var ret =
+            var ret = "";
+                ret = 
                 "<tr>" +
                 "<td>" +
                     "<button type='button' " +
@@ -243,6 +249,7 @@ $(document).ready(function () {
                 "<td>" + product.a_v_ido + "</td>" +
                 "<td>" + product.a_v_doksi + "</td>" +
                 "<td>" + product.a_oradij + "</td>" +
+                "<td>" + product.a_bemut + "</td>" +
                 "<td>" + product.a_minosites + "</td>" +
                 "<td>" + product.a_status + "</td>" +
               "</tr>";
@@ -320,6 +327,7 @@ $(document).ready(function () {
         var a_v_megnev = $("#a_v_megnev").val();
         var a_v_ido = $("#a_v_ido").val();
         var a_v_doksi = $("#a_v_doksi").val();
+        var a_bemut = $("#a_bemut").val();
         var a_oradij = $("#a_oradij").val();
         var a_minosites = $("#a_minosites").val();
         var a_status = 1;
@@ -344,6 +352,7 @@ $(document).ready(function () {
                 a_v_megnev:a_v_megnev,
                 a_v_ido:a_v_ido,
                 a_v_doksi:a_v_doksi,
+                a_bemut:a_bemut,
                 a_oradij,a_oradij,
                 a_minosites:a_minosites,
                 a_status:a_status

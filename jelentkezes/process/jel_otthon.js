@@ -33,11 +33,10 @@ $(document).ready(function () {
                       alert('Ajax error: '+request.responsText);
                     },
                     success: function (data) {
-                      if(data.error != ""){
+                      if(data.error != "0"){
                         alert("Hiba ág: "+data.error);
                         window.close()
                     }else{
-                        alert("Jelentkezési ürlap rögzítve")
                         window.close()
                       }
                     }
