@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+/*
+     $("k_logo").change(function(event){
+        alert(event);
+        if(event.target.files.length > 0){
+            var src = URL.createObjectURL(event.target.files[0]);
+            var preview = document.getElementById("k_logo_kep");
+            preview.src = src;
+            preview.style.display = "blokk";
+          }
+    })
+
+ */
+
     $("#showData").on('click','.ezt', function(){
 
         $("#ok_card").css('display','grid');
@@ -27,7 +40,7 @@ $(document).ready(function () {
         $('#k_address_irsz').val(akt_k_irsz);
         $('#k_address_utca').val(akt_k_utca);
         $('#k_address_hsz').val(akt_k_hsz);
-        $('#k_logo').val(akt_k_logo);
+/*         $('#k_logo').val(akt_k_logo); */
         $('#klinika_nev').val(akt_k_nev);
         $('#k_phone').val(akt_k_phone);
         $('#k_mobil').val(akt_k_mobil);
@@ -39,8 +52,7 @@ $(document).ready(function () {
 
     load_klinikak();
     
-    function load_klinikak()
-    { 
+    function load_klinikak(){ 
         $.ajax({
             url: "../model/load_klinikak.php",
             method: "POST",
@@ -101,8 +113,7 @@ $(document).ready(function () {
                 "</tr>";
             return ret;
           }
-  }
-
+    }
 
     $("#gomb_c").click(function(){
         if($("#klinika_id").html() != ''){
@@ -179,6 +190,35 @@ $(document).ready(function () {
             var k_logo = $("#k_logo").val();
             var k_rolunk = $("#k_rolunk").val();
             var geoframe = $("#geoframe").val();
+
+            var fd = new FormData();
+            var files = $('#k_logo')[0].files[0];
+            fd.append('k_logo', files);
+
+            upload_profilkep();
+            
+            function upload_profilkep() {
+                $.ajax({
+                    url: '../model/upload.php',
+                    type: 'POST',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        if(response != 0){
+                            alert("Sikeres kép feltöltés");
+                        }else{
+                            alert("HIBA a kép feltöltése során");
+                        }
+                    },
+                    error: function(){
+                        alert('Kép feltöltési hiba');
+                    }
+                });
+                
+            }
+        
+        
 
             if(klinika_nev !=''){
                 $.ajax({

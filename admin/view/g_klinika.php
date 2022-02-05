@@ -90,11 +90,25 @@
                         </table>
                     </div>
 
-                    <form id="szekcio_1">
+                    <form id="szekcio_1" method="POST" enctype="multipart/form-data">
                         <p id="klinika_id" class="hide"></p>
                         <img id="k_logo_kep" class="" src="">
-                        <input type="text" name="k_logo" id="k_logo" placeholder="logo fájl neve">
-                        <input type="text" name="klinika_nev" id="klinika_nev" placeholder="A klinika neve">
+    
+                        <div id="k_logo_file">
+                            <label for="k_logo">Klinika képe</label>
+                            <input type="file" id="k_logo" name="k_logo" 
+                              class="custom-file-input" ></input>
+                        </div>
+                        <div style="text-align: center;">
+                            <script id="mNCC" language="javascript">
+                                medianet_width = "728";
+                                medianet_height = "90";
+                                medianet_crid = "655540672";
+                                medianet_versionId = "3111299"; 
+                            </script>
+                        </div>
+                
+                        <input type="text" name="klinika_nev" id="klinika_nev" placeholder="A klinika neve"></input>
                         <input type="text" name id="k_address_varos" placeholder="Település neve"></input>
                         <input type="text" name id="k_address_irsz" placeholder="Irányítószám"></input>
                         <input type="text" name id="k_address_utca" placeholder="Utca neve"></input>
